@@ -17,10 +17,9 @@ body {
 #header1 {
     display: flex;
     align-items: center;
-    width: auto;
     margin: 0px 100px 0px 100px;
-    padding: 5px 5px ;
     justify-content: space-between;
+    /* border: 2px solid; */
 
 }
 
@@ -50,10 +49,9 @@ body {
 }
 
 #navbar1 {
-
     float: left;
     display: flex;
-    padding-right: 10px;
+    padding-left: 0px;
 }
 
 #navbar2 {
@@ -63,6 +61,7 @@ body {
     list-style: none;
     overflow: hidden;
     float: right;
+
 }
 
 #navbar1 li,
@@ -70,7 +69,7 @@ body {
 #navbar2 li {
     position: relative;
     list-style: none;
-    padding: 0px 10px;
+    padding: 0px 20px;
 }
 
 #navbar1 li a,
@@ -95,7 +94,7 @@ body {
 #navbar li a:hover,
 #navbar2 li a:hover,
 #navbar1 li a.active {
-    color:rgb(235, 144, 59) ;
+    color: rgb(235, 144, 59);
 }
 
 #navbar1 li a.active::after,
@@ -103,13 +102,24 @@ body {
 #navbar2 li a.active::after,
 #navbar1 li a:hover::after,
 #navbar li a:hover::after,
-#navbar2 li a:hover::after{
-   content: "";
-   width: 30%;
-   height: 2px;
-   background: rgb(235, 144, 59) ;
-   position: absolute ;
-   bottom: -4px;
-   left: 20px;
+#navbar2 li a:hover::after {
+    content: "";
+    width: 30%;
+    height: 2px;
+    background: rgb(235, 144, 59);
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
 }
-
+#search-bth{
+    height: 28px;
+    background: #FFFFFF;
+    border-radius: 4px;
+}
+#search-text {
+    padding: 0px 50px 0 100px;
+    margin-left: 20px;
+    height: 25px;
+    background: #FFFFFF;
+    border-radius: 4px;
+}
