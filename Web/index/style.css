@@ -1,11 +1,9 @@
 body {
     width: 100%;
+    font-family: 'Roboto';
 }
 
 /* Header Start  */
-/* .header-all {
-    margin: 0px 100px 0px 100px;
-} */
 
 #header {
     display: flex;
@@ -23,7 +21,7 @@ body {
     margin: 0px 100px 0px 100px;
     padding: 5px 5px 0px 0px;
     justify-content: space-between;
-    
+
 }
 
 #button {
@@ -38,12 +36,9 @@ body {
 }
 
 #navbar {
-    /* float: left; */
     display: flex;
     align-items: center;
     justify-content: center;
-    /* width: 500px;
-   border: 1px solid #333; */
 }
 
 .menu {
@@ -58,48 +53,34 @@ body {
 
     float: left;
     display: flex;
-  
-
     padding-right: 10px;
-
 }
 
 #navbar2 {
     display: flex;
-    justify-content:center ;
+    justify-content: center;
     align-items: center;
-    
     padding-left: 700px;
     list-style: none;
 }
- #navbar1 li{
-    
+
+#navbar1 li,
+#navbar li,
+#navbar2 li {
+    position: relative;
     list-style: none;
     padding: 0px 10px;
- }
+}
 
-
-.txt-link {
-    font-family: 'Roboto';
-    font-style: normal;
+#navbar1 li a,
+#navbar li a,
+#navbar2 li a {
+    text-decoration: none;
+    font-weight: 600;
     color: #11142D;
-    font-weight: bold
+    display: block;
+    transition: 0.3s ease;
 }
-
-#navbar li {
-    list-style: none;
-    padding: 0 10px;
-}
-
-/* #navbar2{
-    float: right;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 500px;
- 
-   border: 1px solid #333;
-} */
 
 .logo {
     position: absolute;
@@ -108,3 +89,26 @@ body {
     left: 72px;
     top: -15px;
 }
+
+#navbar1 li a:hover,
+#navbar li a:hover,
+#navbar2 li a:hover,
+#navbar1 li a.active {
+    color:rgb(235, 144, 59) ;
+}
+
+#navbar1 li a.active::after,
+#navbar li a.active::after,
+#navbar2 li a.active::after,
+#navbar1 li a:hover::after,
+#navbar li a:hover::after,
+#navbar2 li a:hover::after{
+   content: "";
+   width: 30%;
+   height: 2px;
+   background: rgb(235, 144, 59) ;
+   position: absolute ;
+   bottom: -4px;
+   left: 20px;
+}
+
