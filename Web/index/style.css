@@ -23,7 +23,7 @@ body {
     margin: 0px 100px 0px 100px;
     padding: 5px 5px 0px 0px;
     justify-content: space-between;
-    color: #11142D;
+    
 }
 
 #button {
@@ -51,7 +51,7 @@ body {
     clear: both;
     display: flex;
     justify-content: space-between;
-    color: #11142D;
+
 }
 
 #navbar1 {
