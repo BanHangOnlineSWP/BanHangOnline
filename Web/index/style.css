@@ -88,6 +88,15 @@ body {
     height: 124px;
     left: 72px;
     top: -15px;
+    
+}
+.logo-txt{
+    
+    font-size: 25px;
+    display: flex;
+    margin-left: 130px;
+    font-weight: bolder;
+    color: rgb(235, 144, 59);
 }
 
 #navbar1 li a:hover,
@@ -111,15 +120,89 @@ body {
     bottom: -4px;
     left: 20px;
 }
-#search-bth{
+
+#search-bth {
     height: 28px;
     background: #FFFFFF;
     border-radius: 4px;
 }
+
 #search-text {
     padding: 0px 50px 0 100px;
     margin-left: 20px;
     height: 25px;
     background: #FFFFFF;
     border-radius: 4px;
+}
+
+
+/* PROMO */
+/* nút qua lại promo */
+.button-left {
+    left: 1%;
+    font-size: 20px
+}
+
+.button-right {
+    right: 1%;
+    font-size: 20px
+}
+
+.image-button {
+    border: none;
+    display: inline-block;
+    padding: 10px;
+    height: 50px;
+    vertical-align: middle;
+    overflow: hidden;
+    color: #fff;
+    background: #000;
+    position: absolute;
+    top: calc(50% - 25px);
+    opacity: 0.5;
+}
+
+.image-button:hover {
+    color: #000;
+    background: #ccc;
+}
+
+/*---Css Chấm tròn---*/
+.badge {
+    flex: auto;
+    text-align: center;
+    margin-bottom: 16px;
+    font-size: 20px;
+    position: absolute;
+
+}
+
+.badge-white {
+    color: #000 !important;
+    background-color: rgb(235, 144, 59) !important
+}
+
+.image-badge {
+    display: inline-block;
+    border-radius: 50%;
+    height: 14px;
+    width: 14px;
+    border: 1px solid #ccc;
+}
+
+.image-badge:hover {
+    background:rgb(235, 144, 59);
+}
+
+#promo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0px 100px 0px 100px;
+        
+}
+
+.imgpromo {
+    width: 1150px;
+    border-radius: 30px;
 }
