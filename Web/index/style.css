@@ -1,6 +1,8 @@
 body {
     width: 100%;
+    margin-top: -10px;
     font-family: 'Roboto';
+    background-color: rgba(0, 0, 0, 0.014);
 }
 
 /* Header Start  */
@@ -17,7 +19,7 @@ body {
 #header1 {
     display: flex;
     align-items: center;
-    margin: 0px 100px 0px 100px;
+    margin: 10px 100px 10px 100px;
     justify-content: space-between;
     /* border: 2px solid; */
 
@@ -144,6 +146,17 @@ body {
 
 
 /* PROMO */
+#promo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0px 100px 0px 100px;
+    
+}
+.imgpromo {
+    width: 1142px;
+    border-radius: 30px;
+}
 /* nút qua lại promo */
 .button-left {
     left: 1%;
@@ -178,7 +191,7 @@ body {
 .badge {
     flex: auto;
     text-align: center;
-    margin-bottom: 16px;
+    margin: 16px 0 16px 0;
     font-size: 20px;
     position: absolute;
 
@@ -201,18 +214,9 @@ body {
     background: rgb(235, 144, 59);
 }
 
-#promo {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 0px 100px 0px 100px;
 
-}
 
-.imgpromo {
-    width: 1150px;
-    border-radius: 30px;
-}
+
 
 /* Responsive */
 .grid {
@@ -304,4 +308,41 @@ body {
 }
 .home-product-item__img{
     background-color: #8890dd;
+}
+
+.story{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* padding: 15px 80px; */
+    margin-top: 50px;
+    background-color: rgb(255, 255, 255);
+}
+.story-all{
+    display: flex;
+    margin: 20px 100px 20px 100px;
+}
+.imgStory{
+    padding: 15px 25px 15px 10px;
+}
+.imgStory img{
+    width: 550px;
+    height: 650px;
+    border-radius: 10px;
+    box-shadow: 10px 50px 100px 10px rgba(0, 0, 0, 0.06);
+}
+
+.description-all{
+    padding: 15px 10px 15px 100px;
+}
+.detail{
+    padding: 100px 0 20px 0;
+    font-weight: bolder;
+    font-size: 40px;
+    color: #11142D;
+}
+.description{
+    font-size: 20px;
+    color: #686262;
+    line-height: 30px;
 }
