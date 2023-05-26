@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Student Deal</title>
+    <title>Trang chủ - Student Deal</title>
 </head>
 <!-- font google: roboto - regular -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,46 +22,49 @@
 
 
     <!-- header  -->
-    <section class="header-all">
+    <div class="header-all">
         <script src="index/script.js"></script>
-        <section id="header">
-            <!-- Logo -->
+        <!-- Logo -->
+        <div id="header">
             <div class="logo-txt"><a href="index.html"><img src="index/img/logo/logo.png" class="logo"
                         alt=""></a>STUDENT DEAL </div>
             <div>
                 <ul id="navbar">
                     <li><a href="aboutus.html">About Us</a></li>
-                    <li><a href="login.html"><button id="button">SIGN IN</button></a></li>
+                    <li><a href="login.html"><button id="button">Đăng nhập</button></a></li>
 
                 </ul>
             </div>
-        </section>
-        <section id="header1">
+        </div>
+
+        <div id="header1">
             <ul id="navbar1">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="trend.html">Trending</a></li>
-                <li><a href="all.html">All</a></li>
+                <li><a href="index.html" class="active">Trang chủ</a></li>
+                <li><a href="trend.html">Xu hướng</a></li>
+                <li><a href="all.html">Tất cả voucher</a></li>
                 <li><a href="blog.html">Blog&News</a></li>
-                <li><a href="promo.html">Promo</a></li>
+                <li><a href="promo.html">Quảng cáo</a></li>
             </ul>
 
+            <!-- Search bar -->
             <div class="navbar-search">
-                <div class="search">
-                    <input id="search-text" type="text" placeholder="Search">
+                <form class="navbar-search-container">
+                    <input id="search-text" type="text" placeholder="Tìm kiếm">
                     <button id="search-btn">
                         <img src="index/img/header/Search.png">
                     </button>
-                </div>
+
+                </form>
             </div>
 
             <ul id="navbar2">
-                <li><a href="cart.html"><i class="fa fa-solid fa-tags"></i></a></li>
-                <li><a href="inforUser.html"><i class="fa fa-solid fa-user"></i></a></li>
-                <li><a href="notification.html"><i class="fa fa-solid fa-bell"></i></a></li>
+                <li><a href="cart.html"><img src="index/img/header/shopping-bag.png" alt=""></a></li>
+                <li><a href="inforUser.html"><img src="index/img/header/user.png" alt=""></a></li>
+                <li><a href="notification.html"><img src="index/img/header/bell.png" alt=""></a></li>
             </ul>
-        </section>
+        </div>
         <!-- Promo  -->
-        <section id="promo">
+        <div id="promo">
             <img class="imgpromo imgP" src="index/img/promo/promo1.png">
             <img class="imgpromo imgP" src="index/img/promo/promo2.png">
             <img class="imgpromo imgP" src="index/img/promo/promo3.png">
@@ -69,14 +72,14 @@
             <button class="image-button button-left" onclick="plusDivs(-1)">&#10094;</button>
             <button class="image-button button-right" onclick="plusDivs(1)">&#10095;</button>
 
-        </section>
+        </div>
         <div class="badge" style="width:100%">
 
             <span class="image-badge" onclick="currentDiv(1)"></span>
             <span class="image-badge" onclick="currentDiv(2)"></span>
             <span class="image-badge" onclick="currentDiv(3)"></span>
         </div>
-    </section>
+    </div>
 
     <!-- Container -->
     <div class="app__container">
