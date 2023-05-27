@@ -71,7 +71,7 @@ body {
 #navbar li,
 #navbar2 li,
 .category-list li {
-    
+    position: relative;
     list-style: none;
     padding: 0px 20px;
 }
@@ -413,6 +413,13 @@ body {
 .feedback-crear{
     font-size: 17px;
 }
-
+.section-p1{
+    background-color: #ccc;
+}
+.col img{
+    width: 144px;
+    height: 124px;
+    
+}
 
 
