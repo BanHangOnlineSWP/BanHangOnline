@@ -94,6 +94,7 @@ body {
 
 .fields,
 .submit-container {
+    margin-top: 15px;
     position: relative;
     width: 100%;
 }
@@ -134,6 +135,16 @@ input {
 input:focus {
     background: #f1c952;
     color: #3f3f3f;
+}
+
+.check{
+    float: left;
+    padding-left: 40px;
+}
+
+.check input{
+    width: 15px;
+    height: 15px;
 }
 
 .link {
