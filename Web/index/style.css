@@ -152,12 +152,12 @@ body {
     font-weight: bolder;
     color: #F86338;
     text-decoration: none;
+    align-items: center;
 }
 
 .logo-img {
     width: 110px;
     height: 50px;
-    padding-top: 13px;
     margin-right: 10px;
 
 }
