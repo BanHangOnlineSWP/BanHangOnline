@@ -18,13 +18,14 @@
 
 <!-- Lien kết css  -->
 <link rel="stylesheet" href="index/style.css">
+<script src="index/script.js"></script>
 
 <body>
 
 
     <!-- header  -->
     <div class="header-all">
-        <script src="index/script.js"></script>
+
         <!-- Logo -->
         <div class="header">
             <div id="header">
@@ -49,6 +50,10 @@
                 <li><a href="all.html">Tất cả voucher</a></li>
                 <li><a href="blog.html">Blog&News</a></li>
                 <li><a href="promo.html">Quảng cáo</a></li>
+                <li class="bar"><a href="cart.html"><i class="fa fa-regular fa-tag"></i> Voucher của tôi</a></li>
+                <li class="bar"><a href="inforUser.html"><i class="fa fa-regular fa-user"> </i> Thông tin của tôi</a>
+                </li>
+                <li class="bar"><a href="notification.html"><i class="fa fa-regular fa-bell"></i> Thông báo</a></li>
             </ul>
 
             <!-- Search bar -->
@@ -61,12 +66,20 @@
 
                 </form>
             </div>
+            <div>
+                <ul id="navbar2">
+                    <li class="lap"><a href="cart.html"><i class="fa fa-regular fa-tag"></i></a></li>
+                    <li id="mobile"><a href="cart.html"><i class="fa fa-regular fa-tag"></i></a></li>
+                    <li class="lap"><a href="inforUser.html"><i class="fa fa-regular fa-user"></i></a></li>
+                    <li class="lap"><a href="notification.html"><i class="fa fa-regular fa-bell"></i></a></li>
+                </ul>
+            </div>
 
-            <ul id="navbar2">
-                <li><a href="cart.html"><i class="fa fa-regular fa-tag"></i></a></li>
-                <li><a href="inforUser.html"><i class="fa fa-regular fa-user"></i></a></li>
-                <li><a href="notification.html"><i class="fa fa-regular fa-bell"></i></a></li>
-            </ul>
+            <div class="mobile">
+                <i class="fas fa-outdent"></i>
+            </div>
+
+
         </div>
 
     </div>
@@ -247,8 +260,8 @@
         <a href="#" class="pro-more"><button id="product-more">Find out More</button></a>
     </section>
     <!-- Story about Student Deal  -->
-    <article class="story">
-        <div class="story-all">
+    <article class="story-all">
+        <div class="story">
             <div class="imgStory"><img src="index/img/story/story.png"></div>
             <article class="description-all">
                 <div class="description-all-detail">Câu chuyện về </br>Student Deal</div>

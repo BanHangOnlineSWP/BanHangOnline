@@ -25,3 +25,12 @@ function showDivs(n) {
     x[ImgPromo - 1].style.display = "block";
     dots[ImgPromo - 1].className += " badge-white";
 }
+
+// Star media query 
+const toggle_menu = document.getElementsByClassName('mobile');
+const nav = document.getElementsByClassName('navbar1');
+
+toggle_menu.onclick = function(){
+nav.classList.toggle('hide');
+}
+    
