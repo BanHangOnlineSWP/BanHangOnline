@@ -33,4 +33,4 @@ const nav = document.getElementsByClassName('navbar1');
 toggle_menu.onclick = function(){
 nav.classList.toggle('hide');
 }
-    
+
