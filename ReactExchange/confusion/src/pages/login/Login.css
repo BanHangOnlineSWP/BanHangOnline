@@ -41,14 +41,14 @@ body {
     position: absolute;
     width: 50%;
     height: 100%;
-    background: url(assets/img/login/sign-up.png);
+    /* background: url(assets/img/login/sign-up.png); */
     background-color: #FF8F5B;
     background-size: cover;
 }
 
 .sign-in-img {
     left: 50%;
-    background: url(assets/img/login/sign-in.png);
+    /* background: url(assets/img/login/sign-in.png); */
     background-color: #FF8F5B;
     background-size: cover;
 }
