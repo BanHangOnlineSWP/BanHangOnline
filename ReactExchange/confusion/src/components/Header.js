@@ -42,6 +42,7 @@ class Header extends React.Component{
 
                             </form>
                         </div>
+                        
                         <div>
                             <ul id="navbar2">
                                 <li class="lap"><NavLink to="/cart"><i class="fa fa-regular fa-tag"></i></NavLink></li>
