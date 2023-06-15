@@ -36,19 +36,21 @@ body {
     /* box-shadow: 0 20px 50px rgba(255, 143, 91, 1); */
 }
 
-.sign-up-img,
-.sign-in-img {
+.sign-up-img {
     position: absolute;
     width: 50%;
     height: 100%;
-    /* background: url(assets/img/login/sign-up.png); */
+    background: url(D:\BanHangOnline\ReactExchange\confusion\public\assets\img\login\sign-up.png);
     background-color: #FF8F5B;
     background-size: cover;
 }
 
 .sign-in-img {
+    position: absolute;
+    width: 50%;
+    height: 100%;
     left: 50%;
-    /* background: url(assets/img/login/sign-in.png); */
+    background: url(D:\BanHangOnline\ReactExchange\confusion\public\assets\img\login\sign-in.png); 
     background-color: #FF8F5B;
     background-size: cover;
 }

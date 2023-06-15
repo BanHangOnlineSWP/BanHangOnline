@@ -1,5 +1,22 @@
 import React from "react";
 import './Login.css';
+// import './script.js';
+
+const formContainer = document.querySelector('.form-container');
+const loginForm = document.querySelector('#sign-in-form');
+const registerForm = document.querySelector('#sign-up-form')
+
+const switchForm = (form) => {
+    if (form == 'register') {
+        formContainer.style.left = '50%';
+        loginForm.style.marginLeft = '-150%';
+        registerForm.style.marginLeft = '-100%';
+    } else {
+        formContainer.style.left = '0%';
+        loginForm.style.marginLeft = '0%';
+        registerForm.style.marginLeft = '50%';
+    }
+}
 class Login extends React.Component {
     render() {
         return (
@@ -13,14 +30,12 @@ class Login extends React.Component {
                         <div class="form" id="sign-in-form">
                             <h1 class="title">Welcome to Student Deal</h1>
                             <h5 class="title-text">Sign in to continue your progress</h5>
+
                             <div class="fields">
                                 <input type="text" placeholder="username" />
                                 <input type="password" placeholder="password" />
                             </div>
-                            <div class="check">
-                                <input type="checkbox" />
-                                <span>Remember me</span>
-                            </div>
+
                             <div class="submit-container">
                                 <button type="submit" class="btn">sign in</button>
                                 <p class="link" onclick="switchForm('register')">Don't have an account? Sign up here</p>
@@ -43,8 +58,6 @@ class Login extends React.Component {
                     </div>
 
                 </div>
-
-                <script src="login/login.js"></script>
             </div>
         );
     }
