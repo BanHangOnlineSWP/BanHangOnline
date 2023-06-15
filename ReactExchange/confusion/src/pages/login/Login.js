@@ -7,6 +7,7 @@ class Login extends React.Component {
             // Login - Register
             <div class="signin">
                 <div class="form-parent">
+
                     <div class="sign-up-img"></div>
                     <div class="sign-in-img"></div>
 
@@ -40,7 +41,6 @@ class Login extends React.Component {
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         );
