@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym</title>
+    <link rel="stylesheet" href="gym.css">
+</head>
+
+<body>
+    <div className="form-parent">
+        <div className="sign-in-img"></div>
+        <div className="sign-up-img"></div>
+
+        <div class="form-container">
+            <div class="form" id="sign-in-form">
+                <h1 class="title">Sign In</h1>
+
+                <div class="fields">
+                    <input type="text" placeholder="username" />
+                    <input type="password" placeholder="password" />
+                </div>
+
+                <div class="submit-container">
+                    <button type="submit" class="btn">Sign in</button>
+                    <p class="link" onclick="switchForm('register')">Don't have an account? Sign up here</p>
+                </div>
+            </div>
+
+            <div class="form" id="sign-up-form">
+                <h1 class="title">Sign Up</h1>
+
+                <div class="fields">
+                    <input type="text" placeholder="username" />
+                    <input type="text" placeholder="age" />
+                    <input type="text" placeholder="email" />
+                    <input type="password" placeholder="password" />
+                </div>
+
+                <div class="submit-container">
+                    <button type="submit" class="btn">Sign up</button>
+                    <p class="link" onclick="switchForm('login')">Already have an account? Sign in here</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/Web/draf/gym.js"></script>
+</body>
+
+</html>

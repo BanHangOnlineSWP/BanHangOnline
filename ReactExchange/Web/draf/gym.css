@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*:focus {
+    outline: none;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    min-height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    background-color: #171717;
+}
+
+.form-parent {
+    width: 850px;
+    /* height: 500px; */
+    background: #000000;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.75);
+}
+
+.sign-up-img,
+.sign-in-img{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background: url(D:\private-gym-prj\client\public\assets\image\sign_up.png);
+    background-size: cover;
+}
+
+.sign-in-img{
+    width: 50%;
+    height: 100%;
+    left: 50%;
+    background: url(D:\private-gym-prj\client\public\assets\image\sign_in.png); 
+    background-size: cover;
+}
+
+.form-container {
+    position: relative;
+    width: 50%;
+    min-width: 300px;
+    height: 100%;
+    background: black;
+    transition: 1s;
+    left: 0;
+    display: grid;
+    overflow: hidden;
+    grid-template-columns: repeat(2, calc(850px/2));
+}
+
+.form {
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    transition: 1s;
+}
+
+.title {
+    width: 100%;
+    text-align: center;
+    /* xem lại figma */
+    font-size: 40px;
+    font-weight: 550;
+    text-transform: capitalize;
+    color: #fff;
+}
+
+.fields,
+.submit-container {
+    margin-top: 15px;
+    position: relative;
+    width: 100%;
+}
+
+input {
+    display: block;
+    width: 100%;
+    margin-bottom: 30px; 
+    padding: 5px 10px;
+    text-transform: capitalize;
+    border: none;
+    border-radius: 10px;
+    height: 50px;
+    background: #171717;
+    color: white;
+    font-size: 16px;
+}
+
+.btn {
+    color: rgb(177, 177, 177);
+    background: #171717;
+    border: 100px;
+    padding: 10px 40px;
+    font-size: 20px;
+    /* text-transform: capitalize; */
+    display: block;
+    margin: auto;
+    cursor: pointer;
+    border-radius: 10px;
+    border-color: rgba(246, 104, 68, 1);
+    margin-bottom: 20px;
+    transition: .5s;
+}
+
+.input:focus,
+.btn:hover {
+    color: #fff;
+    background: #000;
+    border-color: rgba(246, 104, 68, 1);
+}
+
+.link {
+    text-align: center;
+    color: #808080;
+    text-transform: capitalize;
+    text-decoration: underline;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.link:hover {
+    color: #fff;
+}
+
+#sign-up-form {
+    margin-left: 50%;
+}
+
+#sign-up-form .title {
+    margin-bottom: 10px;
+}

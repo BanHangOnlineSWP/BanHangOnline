@@ -1,4 +1,5 @@
 import './App.css';
+// import Slider from './pages/home/Slider';
 import Header from './components/Header';
 import Home from './pages/home/Home';
 import Login from './pages/login/Login';
@@ -7,13 +8,14 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 function App() {
   return (
     <div>
+      {/* <Slider /> */}
       <Router>
 
         <Header />
 
         <Routes>
-          <Route path='/' element={<Home/>}/> 
-          <Route path='/login' element={<Login/>}/> 
+          <Route path='/' element={<Home />} />
+          <Route path='/login' element={<Login />} />
         </Routes>
 
         <Footer />
