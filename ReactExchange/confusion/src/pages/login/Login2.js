@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import './Login2.css';
 
-const Login = () => {
+const Login2 = () => {
     const [addclass, setaddclass] = useState("");
     return (
         <div className={`container ${addclass}`} id="container">
@@ -50,4 +50,4 @@ const Login = () => {
     );
 };
 
-export default Login;
+export default Login2;
