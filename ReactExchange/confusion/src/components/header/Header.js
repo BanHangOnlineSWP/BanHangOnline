@@ -28,7 +28,7 @@ class Header extends React.Component{
                             <li><NavLink to="/blog">Blog&News</NavLink></li>
                             <li><NavLink to="/promo">Quảng cáo</NavLink></li>
                             <li class="bar"><NavLink to="/cart"><i class="fa fa-regular fa-tag"></i> Voucher của tôi</NavLink></li>
-                            <li class="bar"><NavLink to="/inforUser"><i class="fa fa-regular fa-user"> </i> Thông tin của tôi</NavLink>
+                            <li class="bar"><NavLink to="/inforUser/accountsettings"><i class="fa fa-regular fa-user"> </i> Thông tin của tôi</NavLink>
                             </li>
                             <li class="bar"><NavLink to="/notification"><i class="fa fa-regular fa-bell"></i> Thông báo</NavLink></li>
                         </ul>

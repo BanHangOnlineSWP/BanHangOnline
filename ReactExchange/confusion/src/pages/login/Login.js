@@ -23,7 +23,7 @@ class Login extends React.Component {
 
                             <div class="submit-container">
                                 <button type="submit" class="btn">sign in</button>
-                                <p class="link" onclick="switchForm('register')">Don't have an account? Sign up here</p>
+                                <p class="link"  onClick={() => switchForm('register')}>Don't have an account? Sign up here</p>
                             </div>
                         </div>
 
@@ -37,7 +37,7 @@ class Login extends React.Component {
                             </div>
                             <div class="submit-container">
                                 <button type="submit" class="btn">sign up</button>
-                                <p class="link" onclick="switchForm('login')">Already have an account? Sign in here</p>
+                                <p class="link" onClick={() => switchForm('login')}>Already have an account? Sign in here</p>
                             </div>
                         </div>
                     </div>

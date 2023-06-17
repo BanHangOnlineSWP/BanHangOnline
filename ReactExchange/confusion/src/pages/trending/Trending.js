@@ -15,7 +15,7 @@ function Trending() {
     return (
         <main>
             <div className="trending">
-                <img className="trending-img" src="assets/img/trending/Hero.png" alt="" />
+                <img className="trending-img" src="assets/img/banners/Trending.png" alt="" />
             </div>
 
             <div className="voucher-all">

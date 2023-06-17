@@ -1,4 +1,3 @@
-/* Footer  */
 footer {
     background-color: #ffffff;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.548);
@@ -39,8 +38,8 @@ footer .col {
 }
 
 .app-kind {
+    width: 100%;
     margin-top: 5px;
-    ;
     font-size: 15px;
 }
 
