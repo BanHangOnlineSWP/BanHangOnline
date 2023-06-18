@@ -193,6 +193,12 @@
     color: #F3692E;
 }
 
+.pro_bth.code-received {
+    /* Quy tắc cho nút ĐÃ LẤY MÃ */
+    background-color: #fda664b4;
+    color: #ffffff;
+}
+
 .pro-more {
     justify-content: center;
 }

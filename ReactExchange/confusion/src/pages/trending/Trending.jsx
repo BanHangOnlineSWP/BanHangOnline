@@ -1,30 +1,39 @@
 import React from "react";
-import './Trending.css';
-import {NavLink, Link} from 'react-router-dom';
+import "./Trending.css";
+import { NavLink, Link } from "react-router-dom";
 
-// import images
-const productImageDrinkHL = 'https://statics.vincom.com.vn/uu-dai/Highlands-coffee.jpg';
-const productImageTech = 'https://cdn-www.vinid.net/91e68594-samsung.jpg';
-const productImageFood = 'https://statics.vinpearl.com/am-thuc-phap-5_1642581433.jpg';
-const productImageDrinkPL = 'https://stc.shopiness.vn/deal/2021/07/07/a/d/6/1/1625640150660_540.png';
-const productImageFashionNike = 'https://giamgiatructuyen.com/wp-content/uploads/2021/10/ma-giam-gia-nike.jpg';
-const productImageFashionCoolmate = 'https://mcdn.coolmate.me/image/May2022/coolmate-shark-tank-9.jpg';
+import { PRODUCTS } from "../../products";
+import { Product } from "../home/product";
 
+// // import images
+// const productImageDrinkHL = 'https://statics.vincom.com.vn/uu-dai/Highlands-coffee.jpg';
+// const productImageTech = 'https://cdn-www.vinid.net/91e68594-samsung.jpg';
+// const productImageFood = 'https://statics.vinpearl.com/am-thuc-phap-5_1642581433.jpg';
+// const productImageDrinkPL = 'https://stc.shopiness.vn/deal/2021/07/07/a/d/6/1/1625640150660_540.png';
+// const productImageFashionNike = 'https://giamgiatructuyen.com/wp-content/uploads/2021/10/ma-giam-gia-nike.jpg';
+// const productImageFashionCoolmate = 'https://mcdn.coolmate.me/image/May2022/coolmate-shark-tank-9.jpg';
 
 function Trending() {
-    return (
-        <main>
-            <div className="trending">
-                <img className="trending-img" src="assets/img/banners/Trending.png" alt="" />
-            </div>
+  return (
+    <main>
+      <div className="trending">
+        <img
+          className="trending-img"
+          src="assets/img/banners/Trending.png"
+          alt=""
+        />
+      </div>
 
-            <div className="voucher-all">
-                <div className="voucher-trending">
-                    <h1 class="voucher-title">Top Voucher</h1>
+      <div className="voucher-all">
+        <div className="voucher-trending">
+          <h1 class="voucher-title">Top Voucher</h1>
 
-                    <div className="voucher-container">
+          <div className="voucher-container">
+            {PRODUCTS.map((product) => (
+              <Product data={product} />
+            ))}
 
-                        <div class="voucher">
+            {/* <div class="voucher">
                             <div class="voucher-img" style={{ backgroundImage: `url(${productImageDrinkHL})` }}>
                             </div>
                             <div class="voucher-detail">
@@ -142,15 +151,15 @@ function Trending() {
                                 <h4>Giảm 20,000đ đồ uống phúc long siêu chất</h4>
                                 <a href="#"><NavLink to="/description" className={"voucher-active"}><i class="fa-solid fa-circle-arrow-right"></i></NavLink></a>
                             </div>
-                        </div>
-
-                    </div>
-                </div>
-                <a href="#" class="voucher-more"><button id="voucher-more">Find out More</button></a>
-            </div>
-        </main>
-
-    );
+                        </div> */}
+          </div>
+        </div>
+        <a href="#" class="voucher-more">
+          <button id="voucher-more">Find out More</button>
+        </a>
+      </div>
+    </main>
+  );
 }
 
 export default Trending;

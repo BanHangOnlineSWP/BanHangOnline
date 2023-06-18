@@ -26,7 +26,7 @@ export const Product = (props) => {
         <h4>{productDetail}</h4>
         <div className="pro_active">
           <button
-            className="pro_bth"
+            className={`pro_bth ${isCodeReceived ? "code-received" : ""}`}
             onClick={isCodeReceived ? undefined : handleAddToCart}
           >
             {isCodeReceived
