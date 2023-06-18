@@ -18,13 +18,14 @@ body {
 
 .signin {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     min-height: 600px;
     display: flex;
     justify-content: center;
     align-items: center;
     background: #FAD3A5;
     font-family: 'roboto', sans-serif;
+    
 }
 
 .form-parent {
@@ -140,6 +141,7 @@ input:focus {
     color: #3f3f3f;
 }
 
+<<<<<<< HEAD
 .check {
     float: left;
     padding-left: 40px;
@@ -150,6 +152,8 @@ input:focus {
     height: 15px;
 }
 
+=======
+>>>>>>> c0030e130c5ceaf2c7ba920d52b6e68128f15b99
 .link {
     text-align: center;
     color: #3f3f3f;

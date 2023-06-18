@@ -94,7 +94,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    margin: 0px 100px 0px 100px;
+    /* margin: 0px 100px 0px 100px; */
 }
 
 .product {
@@ -217,7 +217,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    margin: 0px 100px 0px 100px;
+    /* margin: 0px 100px 0px 100px; */
 }
 
 .wrapper {
@@ -226,9 +226,7 @@
     position: relative;
 }
 
-.scrollbar-all {
-    margin: 0 100px 0 100px;
-}
+
 
 .scrollbar {
     display: grid;

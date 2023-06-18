@@ -6,7 +6,7 @@ import Slider from "./Slider";
 import { PRODUCTS } from "../../products";
 import { Product } from "./product";
 
-// const slideImages = [
+// const slideImages = [ @gmail.com
 //     {
 //         src: "assets/img/promo/promo1.png"
 //     },
@@ -93,7 +93,7 @@ function Home() {
           <button id="product-more">Find out More</button>
         </a>
       </section>
-
+      {/* Top Voucher  */}
       <section class="scrollbar-all">
         <div>
           <h1 class="product-detail">Top Voucher</h1>
