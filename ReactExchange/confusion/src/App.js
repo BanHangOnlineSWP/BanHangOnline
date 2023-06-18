@@ -5,21 +5,27 @@ import Home from './pages/home/Home';
 import Login from './pages/login/Login';
 import Footer from './components/Footer';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { ShopContextProvider } from './context/shop-context';
+import { Cart } from './pages/cart/Cart';
 function App() {
   return (
     <div>
       {/* <Slider /> */}
-      <Router>
+      <ShopContextProvider>
+        <Router>
 
-        <Header />
+          <Header />
 
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/login' element={<Login />} />
-        </Routes>
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/login' element={<Login />} />
+            <Route path='/cart' element={<Cart />} />
+          </Routes>
 
-        <Footer />
-      </Router>
+          <Footer />
+        </Router>
+      </ShopContextProvider>
+
     </div>
   );
 }

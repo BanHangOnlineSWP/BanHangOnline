@@ -1,13 +1,14 @@
 /* PROMO */
-.promo-all{
+.promo-all {
     margin: 10px 100px 0px 100px;
     overflow: hidden;
     justify-content: space-between;
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+
 }
+
 #promo {
     display: flex;
     align-items: center;
@@ -95,14 +96,15 @@
     justify-content: space-between;
     margin: 0px 100px 0px 100px;
 }
-.product{
+
+.product {
     justify-content: space-between;
     width: 1150px;
     border-radius: 30px;
 
 }
 
-.product-detail{
+.product-detail {
     display: flex;
     justify-content: center;
     font-family: 'Roboto';
@@ -125,55 +127,76 @@
     justify-content: space-around;
     /* padding-top: 20px; */
     flex-wrap: wrap;
+    /* flex-direction: row; */
 }
 
-.pro{
+.pro {
     width: 23%;
     min-width: 250px;
     height: 450px;
     background-color: #ffffff;
-    margin-bottom: 30px;  
+    margin-bottom: 30px;
     border-radius: 50px 50px 0 0;
+
     /* justify-content: space-around; */
 }
 
-.pro:hover{
+.pro:hover {
     box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.24);
 }
 
 .pro_img {
     width: 100%;
-    padding-top: 100%;
+    height: 250px;
+    /* padding-top: 100%; */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     border-radius: 50px 50px 0 0;
+
 }
 
-.des{
-    margin: 20px 10px 20px 10px;
+.des {
+    margin: 20px 0px 20px 0px;
     justify-content: space-around;
-    height: 140px ;
+    height: 140px;
 }
 
 .des p {
     color: #000000be;
-    margin-bottom: 10px;
+    margin: 0 10px 10px 10px;
 }
 
 .des h4 {
     color: #000;
     font-size: 20px;
-    margin-bottom: 30px;
+    margin: 0 10px 30px 10px;
 }
 
 .pro_active {
-    padding-left: 20px;
-    font-size: 30px;
-    font-weight: 700;
+    text-align: center;
+}
+
+.pro_bth {
+    /* font-size: 30px; */
+    background-color: #F3692E;
+    color: #fff;
+    font-size: 14px;
+    padding: 6px 13px 6px 13px;
+    border: none;
+    /* font-weight: 600; */
+    border-radius: 5px;
+}
+
+.pro_bth:hover {
+    background-color: #f3d263;
     color: #F3692E;
 }
- 
+
+.pro-more {
+    justify-content: center;
+}
+
 #product-more {
     font-weight: bold;
     text-align: center;
@@ -183,11 +206,10 @@
     background: #F3692E;
     border-radius: 6px;
     border-style: none;
+    font-weight: 600;
 }
 
-.pro-more{
-    justify-content: center;
-}
+
 
 /* Scrolling bar  - Top Voucher  */
 .scrollbar-all {

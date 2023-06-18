@@ -11,24 +11,24 @@ const divStyle = {
 }
 const slideImages = [
     {
-        src: "assets/img/promo/promo1.png" 
+        src: "assets/img/promo/promo1.png"
     },
     {
         src: "assets/img/promo/promo2.png"
     },
     {
-        src: "assets/img/promo/promo3.png"       
+        src: "assets/img/promo/promo3.png"
     },
 ];
 
-function Slider(){
+function Slider() {
     return (
         <div className="slide-container">
             <Slide>
                 {slideImages.map((slideImage, index) => (
                     <div key={index}>
                         <div style={{ ...divStyle, backgroundImage: `url(${slideImage.src})` }}>
-                           
+
                         </div>
                     </div>
                 ))}

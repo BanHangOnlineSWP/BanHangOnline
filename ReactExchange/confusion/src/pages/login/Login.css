@@ -3,8 +3,9 @@ body {
     /* margin-top: -10px; */
     font-family: 'Roboto';
     background-color: rgba(0, 0, 0, 0.014);
- 
+
 }
+
 * {
     margin: 0;
     padding: 0;
@@ -40,7 +41,7 @@ body {
     position: absolute;
     width: 50%;
     height: 100%;
-    background: url(D:\BanHangOnline\ReactExchange\confusion\public\assets\img\login\sign-up.png);
+    background: url(E:\BanHangOnline\ReactExchange\confusion\public\assets\img\login\sign-up.png);
     background-color: #FF8F5B;
     background-size: cover;
 }
@@ -50,7 +51,7 @@ body {
     width: 50%;
     height: 100%;
     left: 50%;
-    background: url(D:\BanHangOnline\ReactExchange\confusion\public\assets\img\login\sign-in.png); 
+    background: url(E:\BanHangOnline\ReactExchange\confusion\public\assets\img\login\sign-in.png);
     background-color: #FF8F5B;
     background-size: cover;
 }
@@ -139,12 +140,12 @@ input:focus {
     color: #3f3f3f;
 }
 
-.check{
+.check {
     float: left;
     padding-left: 40px;
 }
 
-.check input{
+.check input {
     width: 15px;
     height: 15px;
 }
@@ -171,80 +172,87 @@ input:focus {
 }
 
 /* Footer  */
-footer{
+footer {
     background-color: #ffffff;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.548);
 }
 
-.footer-logo{
+.footer-logo {
     margin-top: 20px;
     width: 130px;
     height: 60px;
 
 }
 
-.footer{
+.footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     margin: 0px 100px 0 100px;
 }
 
-footer .col{
+footer .col {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     margin-bottom: 10px;
     margin-top: 20px;
 }
-.app{
+
+.app {
     display: flex;
 }
-.app img{
+
+.app img {
     width: 120px;
 }
-.app-kind{
-    margin-top: 20px;;
+
+.app-kind {
+    margin-top: 20px;
+    ;
     font-size: 15px;
 }
 
-.app-kind h5{
+.app-kind h5 {
     border: 1px solid #756c67;
     border-radius: 3px;
     margin: 6px;
     padding: 6px;
 }
 
-footer h4{
+footer h4 {
     font-size: 20px;
     padding: 20px 0 10px 0;
-  
+
     color: #F3692E;
 }
-footer p{
+
+footer p {
     font-size: 15px;
     margin: 0 0 8px 0;
     color: rgba(17, 20, 45, 1);
 }
 
-footer a{
+footer a {
     font-size: 13px;
     text-decoration: none;
     color: rgba(17, 20, 45, 1);
     margin-bottom: 13px;
 }
- .follow{
+
+.follow {
     color: rgb(37, 19, 2);
     padding-right: 4px;
     cursor: pointer;
- }
+}
 
- footer .follow a{
+footer .follow a {
     font-size: 20px;
-    margin-right:10px ;
+    margin-right: 10px;
     color: rgba(17, 20, 45, 1);
- }
+}
+
 footer .follow a:hover,
-footer a:hover{
-    color: rgb(245, 125, 13) ;
- }
+footer a:hover {
+    color: rgb(245, 125, 13);
+}
