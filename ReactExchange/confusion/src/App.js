@@ -1,5 +1,5 @@
 import './App.css';
-// import Login2 from './pages/login/Login2';
+// import Slider from './pages/home/Slider';
 import UserProfile from './pages/user/UserIProfile';
 import Header from './components/header/Header';
 import Home from './pages/home/Home';

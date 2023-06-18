@@ -9,7 +9,7 @@ import productImageFashionCoolmate from './assets/product/coolmate-shark-tank-9.
 export const PRODUCTS = [
     {
         id: 1,
-        productType: "Drink",
+        productType: "TDrink",
         productDetail: "Mua 2 tính tiền 1 tại Highlands-coffee",
         productImage: productImageDrinkHL,
     },
@@ -55,6 +55,4 @@ export const PRODUCTS = [
         productDetail: "Nhà hàng ruby giảm 20% set valentine’s special menu",
         productImage: productImageFood,
     },
-
-
 ]

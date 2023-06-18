@@ -9,19 +9,20 @@
 
 }
 
-#promo {
+/* #promo {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    /* margin: 0px 100px 0px 100px; */
-    /* margin-left: 132px; */
-}
+    margin: 0px 100px 0px 100px;
+    margin-left: 132px;
+} */
 
-/* .imgpromo {
+.imgpromo {
     width: 1000px;
+    height: 100vh;
     border-radius: 30px;
     margin: 0 200px 0 200px;
-} */
+}
 
 /* nút qua lại promo */
 /* .button-left {
@@ -68,8 +69,7 @@
 } */
 
 /*---Css Chấm tròn---*/
-.badge {
-    /* flex: auto; */
+/* .badge {
     text-align: center;
     margin: 0 0 16px 0;
     font-size: 20px;
@@ -86,7 +86,7 @@
 
 .image-badge:hover {
     background: rgb(235, 144, 59);
-}
+} */
 
 /* Product */
 #product-all {

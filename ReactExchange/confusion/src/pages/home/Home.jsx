@@ -1,56 +1,45 @@
 import React from "react";
 import "./Home.css";
-import "react-slideshow-image/dist/styles.css";
-// import { Slide } from 'react-slideshow-image';
-import Slider from "./Slider";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/swiper-bundle.min.css';
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+import { EffectFade } from 'swiper';
+
 import { PRODUCTS } from "../../products";
 import { Product } from "./product";
 
-// const slideImages = [ @gmail.com
-//     {
-//         src: "assets/img/promo/promo1.png"
-//     },
-//     {
-//         src: "assets/img/promo/promo2.png"
-//     },
-//     {
-//         src: "assets/img/promo/promo3.png"
-//     },
-// ];
-
-// const divStyle = {
-//     display: 'flex',
-//     alignItems: 'center',
-//     justifyContent: 'center',
-//     backgroundSize: 'cover',
-//     height: '500px'
-// }
 
 // import images
-const productImageDrinkHL =
-  "https://statics.vincom.com.vn/uu-dai/Highlands-coffee.jpg";
+const productImageDrinkHL = "https://statics.vincom.com.vn/uu-dai/Highlands-coffee.jpg";
 const productImageTech = "https://cdn-www.vinid.net/91e68594-samsung.jpg";
-const productImageFood =
-  "https://statics.vinpearl.com/am-thuc-phap-5_1642581433.jpg";
-const productImageDrinkPL =
-  "https://stc.shopiness.vn/deal/2021/07/07/a/d/6/1/1625640150660_540.png";
-const productImageFashionNike =
-  "https://giamgiatructuyen.com/wp-content/uploads/2021/10/ma-giam-gia-nike.jpg";
-const productImageFashionCoolmate =
-  "https://mcdn.coolmate.me/image/May2022/coolmate-shark-tank-9.jpg";
+const productImageFood = "https://statics.vinpearl.com/am-thuc-phap-5_1642581433.jpg";
+const productImageDrinkPL = "https://stc.shopiness.vn/deal/2021/07/07/a/d/6/1/1625640150660_540.png";
+const productImageFashionNike = "https://giamgiatructuyen.com/wp-content/uploads/2021/10/ma-giam-gia-nike.jpg";
+const productImageFashionCoolmate = "https://mcdn.coolmate.me/image/May2022/coolmate-shark-tank-9.jpg";
 
 function Home() {
   return (
     <main>
       <div class="promo-all">
         <div id="promo">
-          <Slider />
-        </div>
-
-        <div class="badge" style={{ width: "100%" }}>
-          <p class="image-badge" onclick="currentDiv(1)"></p>
-          <p class="image-badge" onclick="currentDiv(2)"></p>
-          <p class="image-badge" onclick="currentDiv(3)"></p>
+          <Swiper
+            modules={[Navigation, Pagination, Scrollbar, A11y, EffectFade]}
+            spaceBetween={50}
+            slidesPerView={1}
+            effect="fade"
+            navigation
+            pagination={{ clickable: true }}
+          >
+            <SwiperSlide>
+              <img class="imgpromo" src="assets/img/promo/promo2.png"/>
+            </SwiperSlide>
+            <SwiperSlide>
+              <img class="imgpromo" src="assets/img/promo/promo2.png"/>
+            </SwiperSlide>
+            <SwiperSlide>
+              <img class="imgpromo" src="assets/img/promo/promo3.png"/>
+            </SwiperSlide>
+          </Swiper>
         </div>
       </div>
 
@@ -83,16 +72,20 @@ function Home() {
               <a href="#">Khác</a>
             </li>
           </ul>
+
           <div class="pro-container">
             {PRODUCTS.map((product) => (
               <Product data={product} />
             ))}
           </div>
+
         </div>
+
         <a href="#" class="pro-more">
           <button id="product-more">Find out More</button>
         </a>
       </section>
+
       {/* Top Voucher  */}
       <section class="scrollbar-all">
         <div>
@@ -102,10 +95,7 @@ function Home() {
         <div class="wrapper">
           <ul class="scrollbar">
             <li class="scrollbar-item">
-              <div
-                class="pro_img"
-                style={{ backgroundImage: `url(${productImageDrinkHL})` }}
-              ></div>
+              <div class="pro_img" style={{ backgroundImage: `url(${productImageDrinkHL})` }}></div>
               <div class="des">
                 <p>Thức ăn</p>
                 <h4>Mua 2 tính tiền 1 tại Highlands-coffee</h4>
@@ -116,10 +106,7 @@ function Home() {
             </li>
 
             <li class="scrollbar-item">
-              <div
-                class="pro_img"
-                style={{ backgroundImage: `url(${productImageTech})` }}
-              ></div>
+              <div class="pro_img" style={{ backgroundImage: `url(${productImageTech})` }}></div>
               <div class="des">
                 <p>Công nghệ và điện tử</p>
                 <h4>Giảm ngay 2,000,000đ Samsung Galaxy S23 Series</h4>
@@ -130,10 +117,7 @@ function Home() {
             </li>
 
             <li class="scrollbar-item">
-              <div
-                class="pro_img"
-                style={{ backgroundImage: `url(${productImageFood})` }}
-              ></div>
+              <div class="pro_img" style={{ backgroundImage: `url(${productImageFood})` }}></div>
               <div class="des">
                 <p>Nhà hàng</p>
                 <h4>Nhà hàng ruby giảm 20% set valentine’s special menu</h4>
@@ -144,10 +128,7 @@ function Home() {
             </li>
 
             <li class="scrollbar-item">
-              <div
-                class="pro_img"
-                style={{ backgroundImage: `url(${productImageDrinkPL})` }}
-              ></div>
+              <div class="pro_img" style={{ backgroundImage: `url(${productImageDrinkPL})` }}></div>
               <div class="des">
                 <p>Thức uống</p>
                 <h4>Giảm 20,000đ đồ uống phúc long siêu chất</h4>
@@ -158,10 +139,7 @@ function Home() {
             </li>
 
             <li class="scrollbar-item">
-              <div
-                class="pro_img"
-                style={{ backgroundImage: `url(${productImageFashionNike})` }}
-              ></div>
+              <div class="pro_img" style={{ backgroundImage: `url(${productImageFashionNike})` }}></div>
               <div class="des">
                 <p>Thời trang</p>
                 <h4>Nike giảm thêm 110k trên giá đã giảm</h4>
@@ -172,12 +150,7 @@ function Home() {
             </li>
 
             <li class="scrollbar-item">
-              <div
-                class="pro_img"
-                style={{
-                  backgroundImage: `url(${productImageFashionCoolmate})`,
-                }}
-              ></div>
+              <div class="pro_img"style={{backgroundImage: `url(${productImageFashionCoolmate})`}}></div>
               <div class="des">
                 <p>Thời trang</p>
                 <h4>Coolmate giảm 100k cho đơn hàng từ 550k</h4>
@@ -188,10 +161,7 @@ function Home() {
             </li>
 
             <li class="scrollbar-item">
-              <div
-                class="pro_img"
-                style={{ backgroundImage: `url(${productImageDrinkPL})` }}
-              ></div>
+              <div class="pro_img" style={{ backgroundImage: `url(${productImageDrinkPL})` }}></div>
               <div class="des">
                 <p>Thức uống</p>
                 <h4>Giảm 20,000đ đồ uống phúc long siêu chất</h4>
@@ -202,10 +172,7 @@ function Home() {
             </li>
 
             <li class="scrollbar-item">
-              <div
-                class="pro_img"
-                style={{ backgroundImage: `url(${productImageFood})` }}
-              ></div>
+              <div class="pro_img" style={{ backgroundImage: `url(${productImageFood})` }}></div>
               <div class="des">
                 <p>Nhà hàng</p>
                 <h4>Nhà hàng ruby giảm 20% set valentine’s special menu</h4>
@@ -215,7 +182,6 @@ function Home() {
               </div>
             </li>
           </ul>
-          {/* <!-- <i id="right" class="fa-solid fa-angle-right"></i>   --> */}
         </div>
       </section>
 
