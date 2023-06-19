@@ -1,3 +1,7 @@
+main {
+    padding-top: 130px;
+}
+
 .trending-img {
     width: 100%;
 }
@@ -55,10 +59,10 @@
     border-radius: 50px 50px 0 0;
 }
 
-.voucher-detail{
+.voucher-detail {
     margin: 20px 10px 20px 10px;
     justify-content: space-around;
-    height: 140px ;
+    height: 140px;
 }
 
 .voucher-detail p {
@@ -72,7 +76,7 @@
     margin-bottom: 30px;
 }
 
-.voucher-active{
+.voucher-active {
     padding-left: 20px;
     font-size: 30px;
     font-weight: 700;
@@ -92,7 +96,7 @@
     border-style: none;
 }
 
-#voucher-more:hover{
+#voucher-more:hover {
     justify-content: center;
     color: #F3692E;
     background: #f1c952;
