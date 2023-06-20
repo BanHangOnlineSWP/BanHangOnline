@@ -1,5 +1,6 @@
 import React, { useContext, useState, useEffect } from "react";
 import { ShopContext } from "../../context/shop-context";
+import { NavLink} from "react-router-dom";
 
 export const Product = (props) => {
   const { id, productDetail, productType, productImage } = props.data;
@@ -23,7 +24,11 @@ export const Product = (props) => {
       <img className="pro_img" src={productImage} />
       <div className="des">
         <p>{productType}</p>
-        <h4>{productDetail}</h4>
+
+        <NavLink to="/description">
+          <h4>{productDetail}</h4>
+        </NavLink>
+
         <div className="pro_active">
           <button
             className={`pro_bth ${isCodeReceived ? "code-received" : ""}`}

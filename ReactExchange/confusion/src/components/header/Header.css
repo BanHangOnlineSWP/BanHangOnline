@@ -37,8 +37,7 @@
     color: white;
     background: #F3692E;
     border-radius: 6px;
-    border-style: none;
-
+    border: none;
 }
 
 
@@ -193,6 +192,11 @@
     width: 110px;
     height: 50px;
     margin-right: 10px;
+}
+
+.logo:hover {
+    color: #f1c952;
+    text-decoration: none;
 }
 
 #navbar1 li a:hover,

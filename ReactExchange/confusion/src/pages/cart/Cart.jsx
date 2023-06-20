@@ -40,6 +40,9 @@ export const Cart = () => {
 
       <div className="cart-title">
         <h1> MÃ VOUCHER CỦA TÔI</h1>
+        {/* <img className="trending-img" src="assets/img/banners/Trending.png"
+          alt=""
+        /> */}
       </div>
       <div className="cart-items">
         {PRODUCTS.map((product) => {

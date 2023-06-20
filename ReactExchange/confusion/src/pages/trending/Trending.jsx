@@ -1,17 +1,8 @@
 import React from "react";
 import "./Trending.css";
-import { NavLink, Link } from "react-router-dom";
 
 import { PRODUCTS } from "../../products";
 import { Product } from "../home/product";
-
-// // import images
-// const productImageDrinkHL = 'https://statics.vincom.com.vn/uu-dai/Highlands-coffee.jpg';
-// const productImageTech = 'https://cdn-www.vinid.net/91e68594-samsung.jpg';
-// const productImageFood = 'https://statics.vinpearl.com/am-thuc-phap-5_1642581433.jpg';
-// const productImageDrinkPL = 'https://stc.shopiness.vn/deal/2021/07/07/a/d/6/1/1625640150660_540.png';
-// const productImageFashionNike = 'https://giamgiatructuyen.com/wp-content/uploads/2021/10/ma-giam-gia-nike.jpg';
-// const productImageFashionCoolmate = 'https://mcdn.coolmate.me/image/May2022/coolmate-shark-tank-9.jpg';
 
 function Trending() {
   return (
