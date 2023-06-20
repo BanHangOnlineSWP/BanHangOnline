@@ -25,6 +25,7 @@ function App() {
             <Route path='/description' element={<Description />} />
             <Route path='/inforUser' element={<UserProfile />} />
             <Route path='/cart' element={<Cart />} />
+            {/* <Route path='/use' element={<UseVoucher />} /> */}
           </Routes>
 
           <Footer />

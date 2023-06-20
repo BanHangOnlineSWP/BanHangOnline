@@ -1,5 +1,5 @@
 main {
-    padding-top: 110px;
+    margin-top: 50px;
 }
 
 /* PROMO */
@@ -15,84 +15,6 @@ main {
 
 }
 
-/* #promo {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    margin: 0px 100px 0px 100px;
-    margin-left: 132px;
-} */
-
-.imgpromo {
-    width: 1000px;
-    height: 100vh;
-    border-radius: 30px;
-    margin: 0 200px 0 200px;
-}
-
-/* nút qua lại promo */
-/* .button-left {
-    left: 1%;
-    font-size: 20px;
-    margin-left: 132px;
-} */
-
-/* .button-right {
-    right: 1%;
-    font-size: 20px;
-    margin-right: 132px;
-} */
-
-/* .button-left,
-.button-right {
-    cursor: pointer;
-    position: absolute;
-    width: auto;
-    margin-top: 90px;
-    padding: 16px;
-    transition: 0.6s ease;
-    border-radius: 20px;
-    user-select: none;
-}
-
-.image-button {
-    border: none;
-    display: inline-block;
-    padding: 10px;
-    height: 50px;
-    vertical-align: middle;
-    overflow: hidden;
-    color: white;
-    background: #000;
-    position: absolute;
-    top: calc(50% - 25px);
-    opacity: 0.5;
-}
-
-.image-button:hover {
-    color: #000;
-    background: white;
-} */
-
-/*---Css Chấm tròn---*/
-/* .badge {
-    text-align: center;
-    margin: 0 0 16px 0;
-    font-size: 20px;
-}
-
-.image-badge {
-    display: inline-block;
-    margin-right: 10px;
-    border-radius: 50%;
-    height: 14px;
-    width: 14px;
-    border: 1px solid #ccc;
-}
-
-.image-badge:hover {
-    background: rgb(235, 144, 59);
-} */
 
 /* Product */
 #product-all {
@@ -194,10 +116,7 @@ main {
     border-radius: 5px;
 }
 
-.pro_bth:hover {
-    background-color: #f3d263;
-    color: #F3692E;
-}
+
 
 .pro_bth.code-received {
     /* Quy tắc cho nút ĐÃ LẤY MÃ */
@@ -221,6 +140,13 @@ main {
     font-weight: 600;
 }
 
+#button:hover,
+#product-more:hover,
+.pro_bth:hover,
+.continue button:hover {
+    color: #F3692E;
+    background: #f1c952;
+}
 
 
 /* Scrolling bar  - Top Voucher  */

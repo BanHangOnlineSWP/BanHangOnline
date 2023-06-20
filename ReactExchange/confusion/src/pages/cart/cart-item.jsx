@@ -1,10 +1,16 @@
 import React, { useContext } from "react";
 import { ShopContext } from "../../context/shop-context";
+import { NavLink, Link } from "react-router-dom";
 
 export const CartItem = (props) => {
   const { id, productDetail, productType, productImage } = props.data;
   const { cartItems, addToCart, removeFromCart, updateCartItemCount } =
     useContext(ShopContext);
+
+  const handleUseNowClick = () => {
+    props.handleUseNow(productDetail);
+  };
+
   return (
     <div className="cartItem">
       <div className="cart-img">
@@ -22,8 +28,9 @@ export const CartItem = (props) => {
               onChange={(e) => updateCartItemCount(Number(e.target.value), id)}
             />
           </button>
-
-          <button>SỬ DỤNG NGAY</button>
+          <NavLink to="/use">
+            <button onClick={handleUseNowClick}>SỬ DỤNG NGAY</button>
+          </NavLink>
         </ul>
       </div>
     </div>

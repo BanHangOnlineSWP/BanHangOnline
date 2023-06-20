@@ -38,13 +38,10 @@
     background: #F3692E;
     border-radius: 6px;
     border-style: none;
+
 }
 
-#button:hover,
-#product-more:hover {
-    color: #F3692E;
-    background: #f1c952;
-}
+
 
 .bar,
 .mobile,
