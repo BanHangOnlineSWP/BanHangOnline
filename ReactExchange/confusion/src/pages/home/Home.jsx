@@ -6,7 +6,7 @@ import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
 import { EffectFade } from "swiper";
 
 import { PRODUCTS } from "../../products";
-import { Product } from "./product";
+import { Product } from "./Product";
 
 // import images
 // const productImageDrinkHL =

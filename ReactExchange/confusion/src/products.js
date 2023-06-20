@@ -5,53 +5,52 @@ import productImageDrinkPL from './assets/product/PhucLong.png';
 import productImageFashionNike from './assets/product/ma-giam-gia-nike.jpg';
 import productImageFashionCoolmate from './assets/product/coolmate-shark-tank-9.jpg';
 
-
 export const PRODUCTS = [
     {
         id: 1,
-        productType: "TDrink",
+        productType: "Thức uống",
         productDetail: "Mua 2 tính tiền 1 tại Highlands-coffee",
         productImage: productImageDrinkHL,
     },
     {
         id: 2,
-        productType: "Tech",
+        productType: "Công nghệ",
         productDetail: "Giảm ngay 2,000,000đ Samsung Galaxy S23 Series",
         productImage: productImageTech,
     },
     {
         id: 3,
-        productType: "Food",
+        productType: "Nhà hàng",
         productDetail: "Nhà hàng ruby giảm 20% set valentine’s special menu",
         productImage: productImageFood,
     },
     {
         id: 4,
-        productType: "Style",
+        productType: "Thời trang",
         productDetail: "Nike giảm thêm 110k trên giá đã giảm",
         productImage: productImageFashionNike,
     },
     {
         id: 5,
-        productType: "Style",
+        productType: "Thời trang",
         productDetail: "Coolmate giảm 100k cho đơn hàng từ 550k",
         productImage: productImageFashionCoolmate,
     },
     {
         id: 6,
-        productType: "Drink",
+        productType: "Thức uống",
         productDetail: "Giảm 20,000đ đồ uống phúc long siêu chất",
         productImage: productImageDrinkPL,
     },
     {
         id: 7,
-        productType: "Tech",
+        productType: "Công nghệ",
         productDetail: "Giảm ngay 2,000,000đ Samsung Galaxy S23 Series",
         productImage: productImageTech,
     },
     {
         id: 8,
-        productType: "Food",
+        productType: "Nhà hàng",
         productDetail: "Nhà hàng ruby giảm 20% set valentine’s special menu",
         productImage: productImageFood,
     },

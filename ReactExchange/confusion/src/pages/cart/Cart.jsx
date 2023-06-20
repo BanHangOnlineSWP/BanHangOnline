@@ -15,7 +15,10 @@ export const Cart = () => {
   return (
     <div className="cart">
       <div className="cart-title">
-        <h1> My Vouchers</h1>
+        <h1>My Voucher</h1>
+      {/* <img className="trending-img" src="assets/img/banners/Trending.png"
+          alt=""
+        /> */}
       </div>
       <div className="cart-items">
         {PRODUCTS.map((product) => {
