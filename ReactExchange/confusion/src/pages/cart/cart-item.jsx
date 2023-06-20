@@ -29,7 +29,7 @@ export const CartItem = (props) => {
             />
           </button>
           <NavLink to="/use">
-            <button onClick={handleUseNowClick}>SỬ DỤNG NGAY</button>
+            <button>SỬ DỤNG NGAY</button>
           </NavLink>
         </ul>
       </div>
