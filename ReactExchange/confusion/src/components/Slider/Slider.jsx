@@ -47,6 +47,8 @@ const Slide = styled.div`
 `;
 
 const ImgContainer = styled.div`
+  margin-top: 50px;
+  margin-left: 30px;
   height: 100%;
   flex: 1;
   border-radius: 30px;
@@ -93,8 +95,8 @@ const Slider = () => {
 
   return (
     <Container>
-      <Arrow direction="left" onClick={() => handleClick("left")}>
-        <ArrowLeftOutlined />
+      <Arrow direction="left" onClick={() => handleClick("left")} style={{ marginLeft: "30px"}}>
+        <ArrowLeftOutlined/>
       </Arrow>
       <Wrapper slideIndex={slideIndex}>
         {sliderItems.map((item) => (
@@ -102,15 +104,10 @@ const Slider = () => {
             <ImgContainer>
               <Image src={item.img} />
             </ImgContainer>
-            {/* <InfoContainer>
-              <Title>{item.title}</Title>
-              <Desc>{item.desc}</Desc>
-              <Button>SHOW NOW</Button>
-            </InfoContainer> */}
           </Slide>
         ))}
       </Wrapper>
-      <Arrow direction="right" onClick={() => handleClick("right")}>
+      <Arrow direction="right" onClick={() => handleClick("right")} style={{ marginRight: "30px"}}>
         <ArrowRightOutlined />
       </Arrow>
     </Container>
