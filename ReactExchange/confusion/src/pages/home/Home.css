@@ -3,8 +3,6 @@ main {
 }
 
 /* PROMO */
-
-
 .promo-all {
     margin: 10px 100px 0px 100px;
     overflow: hidden;
@@ -14,7 +12,6 @@ main {
     align-items: center;
 
 }
-
 
 /* Product */
 #product-all {
@@ -29,7 +26,6 @@ main {
     justify-content: space-between;
     width: 1150px;
     border-radius: 30px;
-
 }
 
 .product-detail {
@@ -65,8 +61,6 @@ main {
     background-color: #ffffff;
     margin-bottom: 30px;
     border-radius: 50px 50px 0 0;
-
-    /* justify-content: space-around; */
 }
 
 .pro:hover {
