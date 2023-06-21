@@ -1,36 +1,38 @@
 import React, { useContext } from "react";
 import { ShopContext } from "../../context/shop-context";
-import { NavLink, Link } from "react-router-dom";
 
 export const CartItem = (props) => {
   const { id, productDetail, productType, productImage } = props.data;
-  const { cartItems, addToCart, removeFromCart, updateCartItemCount } =
-    useContext(ShopContext);
+  const {
+    cartItems,
+    addToCart,
+    removeFromCart,
+    updateCartItemCount,
+    setCartItems,
+  } = useContext(ShopContext);
 
-  const handleUseNowClick = () => {
-    props.handleUseNow(productDetail);
+  const handleDungNgay = (productId) => {
+    const updatedVoucherDaLayItems = Object.values(cartItems).filter(
+      (amount) => amount > 0
+    );
+    const updatedCartItems = { ...cartItems };
+    updatedCartItems[productId] = 0;
+    setCartItems(updatedCartItems);
   };
 
   return (
     <div className="cartItem">
       <div className="cart-img">
-        <img src={productImage} />
+        <img src={productImage} alt="Product" />
       </div>
       <div className="cart-des">
-        <p className="cart-detail"> {productDetail}</p>
-        <p className="cart-date"> Date: </p>
+        <p className="cart-detail">{productDetail}</p>
+        <p className="cart-date">Date:</p>
         <ul className="cart-bth">
           <button onClick={() => removeFromCart(id)}>
-            <i class="fa-regular fa-trash-can"></i>
-            <input
-              type="hidden"
-              value={cartItems[id]}
-              onChange={(e) => updateCartItemCount(Number(e.target.value), id)}
-            />
+            <i className="fa-regular fa-trash-can"></i>
           </button>
-          <NavLink to="/use">
-            <button>SỬ DỤNG NGAY</button>
-          </NavLink>
+          <button onClick={() => props.handleDungNgay(id)}>SỬ DỤNG NGAY</button>
         </ul>
       </div>
     </div>

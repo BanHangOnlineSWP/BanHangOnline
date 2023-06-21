@@ -5,14 +5,30 @@ import { CartItem } from "./cart-item";
 import "./cart.css";
 import { useNavigate } from "react-router-dom";
 export const Cart = () => {
-  const { cartItems, getTotalCartAmount, checkout } = useContext(ShopContext);
+  const {
+    cartItems,
+    getTotalCartAmount,
+    // checkout,
+    // setCartItems,
+    removeFromCart,
+  } = useContext(ShopContext);
   const totalAmount = getTotalCartAmount();
   const navigate = useNavigate();
 
   const [toggleState, setToggleState] = useState(1);
+  // const [usedItems, setUsedItems] = useState([]);
 
   const toggleTab = (index) => {
     setToggleState(index);
+  };
+
+  const [voucherDaSuDungItems, setVoucherDaSuDungItems] = useState([]);
+
+  const handleDungNgay = (productId) => {
+    const itemToMove = PRODUCTS.find((item) => item.id === productId);
+    setVoucherDaSuDungItems((prevItems) => [...prevItems, itemToMove]);
+    console.log(voucherDaSuDungItems);
+    removeFromCart(productId);
   };
 
   return (
@@ -49,7 +65,9 @@ export const Cart = () => {
             <div className="cart-items">
               {PRODUCTS.map((product) => {
                 if (cartItems[product.id] !== 0) {
-                  return <CartItem data={product} />;
+                  return (
+                    <CartItem data={product} handleDungNgay={handleDungNgay} />
+                  );
                 }
               })}
             </div>
@@ -72,12 +90,33 @@ export const Cart = () => {
         <div
           className={toggleState === 2 ? "content  active-content" : "content"}
         >
-          <h2>Content 2</h2>
-          <hr />
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
-            voluptatum qui adipisci.
-          </p>
+          <div className="cart">
+            <div className="cart-items">
+              {voucherDaSuDungItems.length > 0 ? (
+                voucherDaSuDungItems.map((item) => (
+                  <div className="cartItem">
+                    <div className="cart-img" key={item.id}>
+                      <img src={item.productImage} alt="Product" />
+                    </div>
+                    <div className="cart-des">
+                      <p className="cart-detail">{item.productDetail}</p>
+                      <p className="cart-date">Date:</p>
+                      <ul className=" cart-bth-used">
+                        <p>ĐÃ SỬ DỤNG</p>
+                      </ul>
+                    </div>
+                  </div>
+                ))
+              ) : (
+                <div className="empty">
+                  <p> Oops, bạn chưa có voucher nào!</p>
+                </div>
+              )}
+            </div>
+          </div>
+          <div className="continue">
+            <button onClick={() => navigate("/")}> TIẾP TỤC MUA SẮM </button>
+          </div>
         </div>
 
         <div
