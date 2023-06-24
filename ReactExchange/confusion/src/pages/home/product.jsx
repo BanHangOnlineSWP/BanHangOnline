@@ -1,6 +1,7 @@
 import React, { useContext, useState, useEffect } from "react";
 import { ShopContext } from "../../context/shop-context";
-import { NavLink} from "react-router-dom";
+import { Link } from 'react-router-dom';
+import { Details } from "../../details";
 
 export const Product = (props) => {
   const { id, productDetail, productType, productImage } = props.data;
@@ -22,12 +23,15 @@ export const Product = (props) => {
   return (
     <div className="pro" key={id}>
       <img className="pro_img" src={productImage} />
+
       <div className="des">
         <p>{productType}</p>
-
-        <NavLink to="/description">
-          <h4>{productDetail}</h4>
-        </NavLink>
+        
+        {Details.map((detail) => (
+          <Link to={`description/${detail.id}`}>
+            <h4>{productDetail}</h4>
+          </Link>
+        ))}
 
         <div className="pro_active">
           <button
@@ -41,5 +45,6 @@ export const Product = (props) => {
         </div>
       </div>
     </div>
+
   );
 };

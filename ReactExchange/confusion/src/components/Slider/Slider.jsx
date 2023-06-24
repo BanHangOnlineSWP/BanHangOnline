@@ -21,7 +21,7 @@ const Arrow = styled.div`
   align-items: center;
   justify-content: center;
   position: absolute;
-  top: 0;
+  top: 20px;
   bottom: 0;
   left: ${(props) => props.direction === "left" && "10px"};
   right: ${(props) => props.direction === "right" && "10px"};
@@ -48,7 +48,7 @@ const Slide = styled.div`
 
 const ImgContainer = styled.div`
   margin-top: 50px;
-  margin-left: 30px;
+  margin-left: 80px;
   height: 100%;
   flex: 1;
   border-radius: 30px;
@@ -56,7 +56,7 @@ const ImgContainer = styled.div`
 
 const Image = styled.img`
   height: 80%;
-  width: 1150px;
+  width: 1000px;
   border-radius: 30px;
 `;
 
@@ -95,7 +95,7 @@ const Slider = () => {
 
   return (
     <Container>
-      <Arrow direction="left" onClick={() => handleClick("left")} style={{ marginLeft: "30px"}}>
+      <Arrow direction="left" onClick={() => handleClick("left")} style={{ marginLeft: "80px"}}>
         <ArrowLeftOutlined/>
       </Arrow>
       <Wrapper slideIndex={slideIndex}>
@@ -107,7 +107,7 @@ const Slider = () => {
           </Slide>
         ))}
       </Wrapper>
-      <Arrow direction="right" onClick={() => handleClick("right")} style={{ marginRight: "30px"}}>
+      <Arrow direction="right" onClick={() => handleClick("right")} style={{ marginRight: "120px"}}>
         <ArrowRightOutlined />
       </Arrow>
     </Container>

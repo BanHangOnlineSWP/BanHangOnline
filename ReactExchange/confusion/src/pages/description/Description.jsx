@@ -1,6 +1,9 @@
+import React from 'react';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCoins } from '@fortawesome/free-solid-svg-icons';
+import { faCoins, faLocationDot } from '@fortawesome/free-solid-svg-icons';
+import { useParams } from 'react-router-dom';
+import { Details } from '../../details';
 
 const Container = styled.div`
     margin-top: 150px;
@@ -22,15 +25,16 @@ const Image = styled.img`
 
 const InfoContainer = styled.div`
     flex: 1;
-    padding: 0px 50px;
+    padding: 0px 20px;
+    
 `;
 
 const Title = styled.h1`
-    font-weight: 800;
+    font-weight: 600;
 `;
 
 const Desc = styled.p`
-    font-size: 20px;
+    font-size: 18px;
     margin: 20px 0px;
 `;
 
@@ -43,7 +47,7 @@ const AddContainer = styled.div`
     width: 50%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justifyContent: space-between;
 `;
 
 const Button = styled.button`
@@ -65,64 +69,67 @@ const Button = styled.button`
 `;
 
 const Condition = styled.h3`
-    font-weight: 800;
+    font-weight: 500;
+    margin-top: 20px;
 `;
 
 const Guide = styled.h3`
     margin-top: 30px;
-    font-weight: 800;
+    font-weight: 500;
 `;
 
 const Description = () => {
+
+    const userName = useParams();
+    const product = Details.find(obj => {
+        return obj.id == userName.id;
+    });
+
+    // let price = product.price.toLocaleString();
+
     return (
         <Container>
-            <Wrapper>
-                <ImgContainer>
-                    <Image src="https://truereview.com.vn/wp-content/uploads/2023/05/ma-giam-gia-highland-25k.png" />
+                <Wrapper>
+                    <ImgContainer>
+                        <Image src={product.productImage} alt='' />
 
-                    <Guide>Cách lấy và sử dụng Voucher</Guide>
-                    <Desc>
-                        Bước 1: Chọn voucher trên website Student Deal. <br></br><br></br>
+                        <Guide>Cách nhận và sử dụng voucher </Guide>
 
-                        Bước 2: Nhấn nút “Add Voucher” để nhận voucher. <br></br><br></br>
+                        <Desc>
+                            {product.guide1} <br></br>
+                            {product.guide2} <br></br>
+                            {product.guide3} <br></br>
+                            {product.guide4} <br></br>
+                            {product.guide5} <br></br>
+                        </Desc>
+                    </ImgContainer>
 
-                        Bước 3: Vào My Vouchers và nhấn voucher đã nhận. <br></br><br></br>
+                    <InfoContainer>
+                        <Title> {product.title} </Title>
 
-                        Bước 4: Nó sẽ hiện ra mã Code. <br></br><br></br>
+                        <Desc>
+                            {product.description1} <br></br>
+                            - {product.description2} <br></br>
+                            - {product.description3} <br></br> <br></br>
+                            <FontAwesomeIcon icon={faLocationDot} style={{ color: "#ff0000", }} /> {product.time} <br></br>
+                        </Desc>
 
-                        Bước 5: Xuất trình mã code của voucher tại cửa hàng được ủy quyền để sử dụng ưu đãi. <br></br><br></br>
-                    </Desc>
-                </ImgContainer>
+                        <Price> {product.price} <FontAwesomeIcon icon={faCoins} /></Price>
 
-                <InfoContainer>
-                    <Title>Voucher giảm 25k Highlands</Title>
+                        <AddContainer>
+                            <Button>Lấy mã ngay</Button>
+                        </AddContainer>
 
-                    <Desc>Voucher áp dụng khi mua hóa đơn từ 120K đồ uống Highland sẽ được giảm 25K.<br></br><br></br>
-                        – Khách hàng có thể trả thêm tiền để đổi ly cỡ nhỏ trong combo sang cỡ vừa hoặc lớn<br></br><br></br>
-                        – Không áp dụng cho sản phẩm Trà Nhiệt Đới / Trà Dưa Hấu Vải <br></br><br></br>
+                        <br></br> <br></br>
+                        <Condition> Điều kiện áp dụng </Condition>
 
-                        Thời gian áp dụng: Từ 01/07/2023 đến hết 15/07/2023.
-                    </Desc>
-
-                    <Price>20 <FontAwesomeIcon icon={faCoins} /></Price>
-
-                    <AddContainer>
-                        <Button>Lấy mã ngay</Button>
-                    </AddContainer>
-
-                    <br></br> <br></br>
-                    <Condition>Điều kiện áp dụng</Condition>
-                    <Desc>
-                        Mỗi mã khuyến mãi chỉ được sử dụng 01 lần và chỉ áp dụng trên 01 hóa đơn. <br></br> <br></br>
-
-                        Không áp dụng cùng các chương trình khuyến mãi khác và các đối tác giao hàng. <br></br> <br></br>
-
-                        Voucher áp dụng toàn quốc, ngoại trừ các cơ sở:
-                        Highlands Coffee Dinh Độc Lập bên trong, Grand World Phú Quốc, VinWonders Phú Quốc
-                        và sân bay trên toàn quốc. <br></br> <br></br>
-                    </Desc>
-                </InfoContainer>
-            </Wrapper>
+                        <Desc>
+                            {product.condition1} <br></br> <br></br>
+                            {product.condition2} <br></br> <br></br>
+                            {product.condition3} <br></br> <br></br>
+                        </Desc>
+                    </InfoContainer>
+                </Wrapper>
         </Container>
     )
 }

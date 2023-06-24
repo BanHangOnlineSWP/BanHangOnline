@@ -31,6 +31,7 @@ main {
 .product-detail {
     display: flex;
     justify-content: center;
+    padding-left: 100px;
     font-family: 'Roboto';
     font-style: bold;
     font-size: 30px;
@@ -60,7 +61,8 @@ main {
     height: 450px;
     background-color: #ffffff;
     margin-bottom: 30px;
-    border-radius: 50px 50px 0 0;
+    /* border-radius: 50px 50px 0 0; */
+    border-radius: 10px;
 }
 
 .pro:hover {
@@ -74,8 +76,8 @@ main {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    border-radius: 50px 50px 0 0;
-
+    /* border-radius: 50px 50px 0 0; */
+    border-radius: 10px 10px 0 0;
 }
 
 .des {
@@ -157,8 +159,6 @@ main {
     width: 100%;
     position: relative;
 }
-
-
 
 .scrollbar {
     display: grid;
