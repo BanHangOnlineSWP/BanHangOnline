@@ -56,7 +56,7 @@ const ImgContainer = styled.div`
 
 const Image = styled.img`
   height: 80%;
-  width: 1150px;
+  width: 1100px;
   border-radius: 30px;
 `;
 
@@ -95,8 +95,12 @@ const Slider = () => {
 
   return (
     <Container>
-      <Arrow direction="left" onClick={() => handleClick("left")} style={{ marginLeft: "30px"}}>
-        <ArrowLeftOutlined/>
+      <Arrow
+        direction="left"
+        onClick={() => handleClick("left")}
+        style={{ marginLeft: "30px" }}
+      >
+        <ArrowLeftOutlined />
       </Arrow>
       <Wrapper slideIndex={slideIndex}>
         {sliderItems.map((item) => (
@@ -107,7 +111,11 @@ const Slider = () => {
           </Slide>
         ))}
       </Wrapper>
-      <Arrow direction="right" onClick={() => handleClick("right")} style={{ marginRight: "30px"}}>
+      <Arrow
+        direction="right"
+        onClick={() => handleClick("right")}
+        style={{ marginRight: "30px" }}
+      >
         <ArrowRightOutlined />
       </Arrow>
     </Container>

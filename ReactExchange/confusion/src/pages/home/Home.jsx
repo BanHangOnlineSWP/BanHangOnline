@@ -3,7 +3,7 @@ import "./Home.css";
 import { PRODUCTS } from "../../products";
 import { Product } from "./product";
 import Slider from "../../components/Slider/Slider";
-
+import SliderFeedback from "../../components/Slider/SliderFeedback";
 function Home() {
   return (
     <main>
@@ -103,10 +103,12 @@ function Home() {
           <img src="assets/img/partner/travelloka.png" />
         </div>
       </div>
-
+      {/* FEEDBACK  */}
       <div class="feedback-all">
-        <div class="feedback">
+        <SliderFeedback />
+        {/* <div class="feedback">
           <img src="assets/img/feedback/feedback1.png" />
+          
           <article class="feedback-description">
             <div class="feedback-detail"> Đánh giá của sinh viên</div>
             <div class="feedback-desc">
@@ -118,7 +120,7 @@ function Home() {
             <div class="feedback-name">Anna Saraspova</div>
             <div class="feedback-crear">Sinh viên đại học FPT</div>
           </article>
-        </div>
+        </div> */}
       </div>
     </main>
   );
