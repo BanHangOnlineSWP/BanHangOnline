@@ -29,7 +29,7 @@ export const Product = (props) => {
         
         {Details.map((detail) => (
           <Link to={`description/${detail.id}`}>
-            <h4>{productDetail}</h4>
+            <h4>{detail.title}</h4>
           </Link>
         ))}
 
