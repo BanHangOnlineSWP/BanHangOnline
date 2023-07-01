@@ -23,8 +23,8 @@ const Arrow = styled.div`
   position: absolute;
   top: 20px;
   bottom: 0;
-  left: ${(props) => props.direction === "left" && "10px"};
-  right: ${(props) => props.direction === "right" && "10px"};
+  left: ${(props) => props.direction === "left" && "30px"};
+  right: ${(props) => props.direction === "right" && "0px"};
   margin: auto;
   cursor: pointer;
   opacity: 0.5;
@@ -58,6 +58,7 @@ const Image = styled.img`
   height: 80%;
   width: 1000px;
   border-radius: 30px;
+  margin-left: 20px;
 `;
 
 const InfoContainer = styled.div`
