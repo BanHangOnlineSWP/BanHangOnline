@@ -44,9 +44,7 @@ function Home() {
           </ul>
 
           <div class="pro-container">
-            {PRODUCTS.map((product) => (
-              <Product data={product} />
-            ))}
+            <Product />
           </div>
         </div>
 
@@ -62,9 +60,10 @@ function Home() {
         </div>
         <div class="wrapper">
           <ul class="scrollbar">
-            {PRODUCTS.map((product) => (
+            {/* {PRODUCTS.map((product) => (
               <Product data={product} />
-            ))}
+            ))} */}
+            <Product/>
           </ul>
         </div>
       </section>
