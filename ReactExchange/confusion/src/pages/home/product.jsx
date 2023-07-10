@@ -1,6 +1,6 @@
 import React, { useContext, useState, useEffect } from "react";
 import { ShopContext } from "../../context/shop-context";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import { Details } from "../../details";
 
 export const Product = (props) => {
@@ -26,8 +26,9 @@ export const Product = (props) => {
 
       <div className="des">
         <p>{productType}</p>
-        
+
         {Details.map((detail) => (
+          // console.log(detail);
           <Link to={`description/${detail.id}`}>
             <h4>{detail.title}</h4>
           </Link>
@@ -45,6 +46,5 @@ export const Product = (props) => {
         </div>
       </div>
     </div>
-
   );
 };
