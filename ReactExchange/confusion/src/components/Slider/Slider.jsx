@@ -43,12 +43,13 @@ const Slide = styled.div`
   height: 100vh;
   display: flex;
   align-items: center;
+
   //   background-color: #${(props) => props.bg};
 `;
 
 const ImgContainer = styled.div`
   margin-top: 50px;
-  margin-left: 80px;
+  justify-content: space-between;
   height: 100%;
   flex: 1;
   border-radius: 30px;
@@ -56,14 +57,14 @@ const ImgContainer = styled.div`
 
 const Image = styled.img`
   height: 80%;
-  width: 1000px;
+  width: 80%;
   border-radius: 30px;
   margin-left: 20px;
 `;
 
 const InfoContainer = styled.div`
   flex: 1;
-  padding: 50px;
+  // padding: 50px;
 `;
 
 const Title = styled.h1`
@@ -96,8 +97,12 @@ const Slider = () => {
 
   return (
     <Container>
-      <Arrow direction="left" onClick={() => handleClick("left")} style={{ marginLeft: "80px"}}>
-        <ArrowLeftOutlined/>
+      <Arrow
+        direction="left"
+        onClick={() => handleClick("left")}
+        style={{ marginLeft: "80px" }}
+      >
+        <ArrowLeftOutlined />
       </Arrow>
       <Wrapper slideIndex={slideIndex}>
         {sliderItems.map((item) => (
@@ -108,7 +113,11 @@ const Slider = () => {
           </Slide>
         ))}
       </Wrapper>
-      <Arrow direction="right" onClick={() => handleClick("right")} style={{ marginRight: "120px"}}>
+      <Arrow
+        direction="right"
+        onClick={() => handleClick("right")}
+        style={{ marginRight: "120px" }}
+      >
         <ArrowRightOutlined />
       </Arrow>
     </Container>
