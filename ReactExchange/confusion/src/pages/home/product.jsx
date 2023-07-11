@@ -4,9 +4,10 @@ import { Link } from "react-router-dom";
 import { PRODUCTS } from "../../products";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock } from "@fortawesome/free-solid-svg-icons";
+import LinearDeterminate from "../../components/progress/Progress";
 
 export const Product = () => {
-  //const { id } = props.data;
+  // const { id } = props.data;
   const { addToCart, cartItems } = useContext(ShopContext);
 
   // const cartItemCount = cartItems[id]
@@ -38,8 +39,20 @@ export const Product = () => {
             <Link to={`description/${detail.id}`}>
               <h4>{detail.title}</h4>
             </Link>
+          </div>
+          <div>
+            <div>
+              <LinearDeterminate />
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+};
 
-            <div className="pro_active">
+{
+  /* <div className="pro_active">
               <button
                 className={`pro_bth ${isCodeReceived ? "code-received" : ""}`}
                 onClick={isCodeReceived ? undefined : handleAddToCart}
@@ -52,10 +65,5 @@ export const Product = () => {
                         : ""
                     }`}
               </button>
-            </div>
-          </div>
-        </div>
-      ))}
-    </div>
-  );
-};
+            </div> */
+}
