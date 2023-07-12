@@ -62,9 +62,9 @@ function Home() {
         </div>
         <div class="wrapper">
           <ul class="scrollbar">
-            {/* {PRODUCTS.map((product) => (
+            {PRODUCTS.map((product) => (
               <Product data={product} />
-            ))} */}
+            ))}
             <Product />
           </ul>
         </div>
