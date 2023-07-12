@@ -44,7 +44,9 @@ function Home() {
           </ul>
 
           <div class="pro-container">
-            <Product />
+            {PRODUCTS.map((product) => (
+              <Product data={product} />
+            ))}
           </div>
         </div>
 
@@ -63,7 +65,7 @@ function Home() {
             {/* {PRODUCTS.map((product) => (
               <Product data={product} />
             ))} */}
-            <Product/>
+            <Product />
           </ul>
         </div>
       </section>

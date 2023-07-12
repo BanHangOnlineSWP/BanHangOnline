@@ -1,8 +1,10 @@
 import React, { useContext } from "react";
 import { ShopContext } from "../../context/shop-context";
+// import { PRODUCTS } from "../../products";
 
 export const CartItem = (props) => {
-  const { id, productDetail, productType, productImage } = props.data;
+  const { id, title, duration, image } = props.data || {};
+
   const {
     cartItems,
     addToCart,
@@ -23,16 +25,16 @@ export const CartItem = (props) => {
   return (
     <div className="cartItem">
       <div className="cart-img">
-        <img src={productImage} alt="Product" />
+        <img src={image} alt="Product" />
       </div>
       <div className="cart-des">
-        <p className="cart-detail">{productDetail}</p>
-        <p className="cart-date">Date:</p>
+        <p className="cart-detail">{title}</p>
+        <p className="cart-date">Date:{duration}</p>
         <ul className="cart-bth">
           <button onClick={() => removeFromCart(id)}>
             <i className="fa-regular fa-trash-can"></i>
           </button>
-          <button onClick={() => props.handleDungNgay(id)}>SỬ DỤNG NGAY</button>
+          <button onClick={() => handleDungNgay(id)}>SỬ DỤNG NGAY</button>
         </ul>
       </div>
     </div>

@@ -86,11 +86,6 @@ const Description = () => {
     setIsCodeReceived(cartItems[PRODUCTS.id] > 0);
   }, [cartItems, PRODUCTS.id]);
 
-  const handleAddToCart = () => {
-    addToCart(PRODUCTS.id);
-    setIsCodeReceived(true);
-  };
-
   const userName = useParams();
   const product = Details.find((obj) => {
     return obj.id == userName.id;
@@ -98,6 +93,10 @@ const Description = () => {
 
   // let price = product.price.toLocaleString();
 
+  const handleAddToCart = () => {
+    addToCart(PRODUCTS.id);
+    setIsCodeReceived(true);
+  };
   return (
     <Container>
       <Wrapper>
