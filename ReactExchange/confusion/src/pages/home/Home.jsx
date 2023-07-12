@@ -65,7 +65,6 @@ function Home() {
             {PRODUCTS.map((product) => (
               <Product data={product} />
             ))}
-            <Product />
           </ul>
         </div>
       </section>
