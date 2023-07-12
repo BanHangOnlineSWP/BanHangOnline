@@ -34,7 +34,7 @@ export const CartItem = (props) => {
           <button onClick={() => removeFromCart(id)}>
             <i className="fa-regular fa-trash-can"></i>
           </button>
-          <button onClick={() => handleDungNgay(id)}>SỬ DỤNG NGAY</button>
+          <button onClick={() => props.handleDungNgay(id)}>SỬ DỤNG NGAY</button>
         </ul>
       </div>
     </div>

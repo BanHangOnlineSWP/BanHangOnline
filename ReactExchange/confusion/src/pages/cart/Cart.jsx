@@ -97,11 +97,11 @@ export const Cart = () => {
                 voucherDaSuDungItems.map((item) => (
                   <div className="cartItem">
                     <div className="cart-img" key={item.id}>
-                      <img src={item.productImage} alt="Product" />
+                      <img src={item.image} alt="Product" />
                     </div>
                     <div className="cart-des">
-                      <p className="cart-detail">{item.productDetail}</p>
-                      <p className="cart-date">Date:</p>
+                      <p className="cart-detail">{item.title}</p>
+                      <p className="cart-date">Date:{item.duration}</p>
                       <ul className=" cart-bth-used">
                         <p>ĐÃ SỬ DỤNG</p>
                       </ul>
