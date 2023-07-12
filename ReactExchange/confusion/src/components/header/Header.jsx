@@ -14,7 +14,7 @@ class Header extends React.Component {
       <div class="header-all">
         <div class="header">
           <div id="header">
-            <a class="logo" href="index">
+            <a class="logo" href="/">
               <img src="assets/img/logo/logo2.png" class="logo-img" alt="" />
               <p>STUDENT DEAL</p>
             </a>

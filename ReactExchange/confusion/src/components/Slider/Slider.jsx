@@ -24,7 +24,7 @@ const Arrow = styled.div`
   top: 20px;
   bottom: 0;
   left: ${(props) => props.direction === "left" && "30px"};
-  right: ${(props) => props.direction === "right" && "0px"};
+  right: ${(props) => props.direction === "right" && "50px"};
   margin: auto;
   cursor: pointer;
   opacity: 0.5;
@@ -100,7 +100,6 @@ const Slider = () => {
       <Arrow
         direction="left"
         onClick={() => handleClick("left")}
-        style={{ marginLeft: "80px" }}
       >
         <ArrowLeftOutlined />
       </Arrow>
@@ -116,7 +115,6 @@ const Slider = () => {
       <Arrow
         direction="right"
         onClick={() => handleClick("right")}
-        style={{ marginRight: "120px" }}
       >
         <ArrowRightOutlined />
       </Arrow>
