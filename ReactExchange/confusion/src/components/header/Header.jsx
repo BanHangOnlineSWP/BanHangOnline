@@ -4,6 +4,7 @@ import { NavLink, Link } from "react-router-dom";
 
 import { ShopContext } from "../../context/shop-context";
 // import { CartItem } from "../../pages/cart/cart-item";
+import CustomizedInputBase from "./Search";
 
 class Header extends React.Component {
   static contextType = ShopContext;
@@ -69,13 +70,14 @@ class Header extends React.Component {
             </li>
           </ul>
 
-          <div class="navbar-search">
-            <form class="navbar-search-container">
+          <div class="navbar-search-container">
+            {/* <form class="navbar-search-container">
               <input id="search-text" type="text" placeholder="Tìm kiếm" />
               <button id="search-btn">
                 <img src="assets/img/header/Search.png" />
               </button>
-            </form>
+            </form> */}
+            <CustomizedInputBase />
           </div>
 
           <div>
