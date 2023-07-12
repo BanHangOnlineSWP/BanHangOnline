@@ -1,6 +1,7 @@
 import './App.css';
 import { Routes, Route } from "react-router-dom";import UserProfile from './pages/user/UserIProfile';
 import Header from './components/header/Header';
+import About from './pages/aboutUs/About';
 import Home from './pages/home/Home';
 import Trending from './pages/trending/Trending';
 import Description from './pages/description/Description';
@@ -18,6 +19,7 @@ function App() {
             <Route path='/' element={<Home />} />
             {/* <Route path='/login2' element={<Login2 />} /> */}
             <Route path='/trend' element={<Trending />} />
+            <Route path='/about' element={<About />} />
             <Route path='/description/:id' element={<Description />} />
             <Route path='/inforUser' element={<UserProfile />} />
             <Route path='/cart' element={<Cart />} />
