@@ -12,6 +12,7 @@ export const Cart = () => {
     // checkout,
     // setCartItems,
     removeFromCart,
+    updateCartItemCount,
   } = useContext(ShopContext);
   const totalAmount = getTotalCartAmount();
   const navigate = useNavigate();
@@ -30,6 +31,7 @@ export const Cart = () => {
     setVoucherDaSuDungItems((prevItems) => [...prevItems, itemToMove]);
     console.log(voucherDaSuDungItems);
     removeFromCart(productId);
+    updateCartItemCount(0, productId);
   };
 
   return (

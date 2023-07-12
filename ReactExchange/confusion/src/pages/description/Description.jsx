@@ -82,26 +82,25 @@ const Guide = styled.h3`
 const Description = () => {
   const { addToCart, cartItems } = useContext(ShopContext);
   const [isCodeReceived, setIsCodeReceived] = useState(false);
-  useEffect(() => {
-    setIsCodeReceived(cartItems[PRODUCTS.id] > 0);
-  }, [cartItems, PRODUCTS.id]);
+  const { id } = useParams();
+  const productId = parseInt(id); // Chuyển đổi id thành số nguyên
+  const product = PRODUCTS.find((obj) => obj.id === productId);
 
-  const userName = useParams();
-  const product = Details.find((obj) => {
-    return obj.id == userName.id;
-  });
+  useEffect(() => {
+    setIsCodeReceived(cartItems[id] > 0);
+  }, [cartItems, id]);
 
   // let price = product.price.toLocaleString();
 
   const handleAddToCart = () => {
-    addToCart(PRODUCTS.id);
+    addToCart(id);
     setIsCodeReceived(true);
   };
   return (
     <Container>
       <Wrapper>
         <ImgContainer>
-          <Image src={product.productImage} alt="" />
+          <Image src={product.image} alt="" />
 
           <Guide>Cách nhận và sử dụng voucher </Guide>
 
