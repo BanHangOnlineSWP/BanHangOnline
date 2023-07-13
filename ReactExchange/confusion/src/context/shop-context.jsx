@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { createContext, useState, useEffect } from "react";
 import { PRODUCTS } from "../products";
 
 export const ShopContext = createContext(null);
@@ -12,7 +12,18 @@ const getDefaultCart = () => {
 };
 
 export const ShopContextProvider = (props) => {
-  const [cartItems, setCartItems] = useState(getDefaultCart());
+  // const [cartItems, setCartItems] = useState(getDefaultCart());
+
+  const [cartItems, setCartItems] = useState(() => {
+    // Khôi phục giá trị từ localStorage hoặc trả về giá trị mặc định
+    const storedCartItems = JSON.parse(localStorage.getItem("cartItems"));
+    return storedCartItems || getDefaultCart();
+  });
+
+  useEffect(() => {
+    // Lưu trữ cartItems vào localStorage khi giá trị thay đổi
+    localStorage.setItem("cartItems", JSON.stringify(cartItems));
+  }, [cartItems]);
 
   const getTotalCartAmount = () => {
     let totalAmount = 0;

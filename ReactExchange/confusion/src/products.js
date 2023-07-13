@@ -5,11 +5,17 @@ import productImageDrinkPL from './assets/product/PhucLong.png';
 import productImageFashionNike from './assets/product/ma-giam-gia-nike.jpg';
 import productImageFashionCoolmate from './assets/product/coolmate-shark-tank-9.jpg';
 
+
+
 export const PRODUCTS = [
+
     {
         id: 1,
         type: "Thức uống",
-        duration: "01/07/2023 - 30/07/2023",
+        duration: {
+            startDate: new Date(2023, 2 - 1, 1),
+            endDate: new Date(2023, 6 - 1, 30),
+        },
         title: "Voucher giảm 25k Highlands",
         description1: "Voucher áp dụng khi mua hóa đơn từ 120K đồ uống Highland trực tiếp tại cửa hàng sẽ được giảm 25K.",
         description2: "Khách hàng có thể trả thêm tiền để đổi ly cỡ nhỏ trong combo sang cỡ vừa hoặc lớn.",
@@ -49,7 +55,10 @@ export const PRODUCTS = [
     {
         id: 3,
         type: "Nhà hàng",
-        duration: "15/07/2023 - 30/08/2023",
+        duration: {
+            startDate: new Date(2023, 6, 1),
+            endDate: new Date(2023, 6, 30),
+        },
         title: "Voucher giảm 20% set Valentine's special menu",
         description1: "Giảm 20% Set Valentine’s Special Menu tại Nhà hàng Ruby (Giá gốc: 2,500,000đ/set/02 người chỉ còn 2,000,000đ/set/02 người).",
         description2: "Do giới hạn số lượng voucher, chương trình có thể kết thúc trước thời gian dự kiến.",
@@ -69,7 +78,10 @@ export const PRODUCTS = [
     {
         id: 4,
         type: "Thời trang",
-        duration: "15/07/2023 - 15/08/2023",
+        duration: {
+            startDate: new Date(2023, 6, 1),
+            endDate: new Date(2023, 6, 30),
+        },
         title: "Voucher giảm thêm 110k trên giá đã giảm",
         description1: "Voucher giảm 110,000đ áp dụng khi trực tiếp mua sản phẩm của thương hiệu Nike ở các chi nhánh tại TP.Hồ Chí Minh.",
         description2: "Do giới hạn số lượng voucher, chương trình có thể kết thúc trước thời gian dự kiến.",
@@ -89,7 +101,10 @@ export const PRODUCTS = [
     {
         id: 5,
         type: "Thời trang",
-        duration: "01/07/2023 - 30/07/2023",
+        duration: {
+            startDate: new Date(2023, 6, 1),
+            endDate: new Date(2023, 6, 30),
+        },
         title: "Voucher giảm 110k cho đơn hàng từ 550k",
         description1: "Voucher giảm 100,000đ áp dụng cho đơn hàng từ 550,000đ khi mua sắm trực tiếp ở các chi nhánh Coolmate tại TP.Hồ Chí Minh.",
         description2: "Do giới hạn số lượng voucher, chương trình có thể kết thúc trước thời gian dự kiến.",
@@ -109,7 +124,10 @@ export const PRODUCTS = [
     {
         id: 6,
         type: "Thức uống",
-        duration: "01/07/2023 - 30/07/2023",
+        duration: {
+            startDate: new Date(2023, 6, 1),
+            endDate: new Date(2023, 6, 30),
+        },
         title: "Voucher giảm 20k đồ uống Phúc Long siêu chất",
         description1: "Voucher giảm 20,000đ cho hóa đơn từ 55,000đ trở lên áp dụng khi mua sản phẩm trực tiếp tại các chi nhánh Phúc Long ở TP.Hồ Chí Minh.",
         description2: "Khách hàng có thể trả thêm tiền để đổi ly cỡ nhỏ trong combo sang cỡ vừa hoặc lớn.",
@@ -129,7 +147,10 @@ export const PRODUCTS = [
     {
         id: 7,
         type: "Công nghệ",
-        duration: "01/07/2023 - 15/07/2023",
+        duration: {
+            startDate: new Date(2023, 6, 1),
+            endDate: new Date(2023, 6, 30),
+        },
         title: "Nhận Voucher 2 triệu mua Samsung Galaxy S23",
         description1: "Voucher được áp dụng khi mua các sản phẩm Samsung Galaxy S23 Series tại Hệ thống CellphoneS ở TP.Hồ Chí Minh.",
         description2: "Do giới hạn số lượng voucher, chương trình có thể kết thúc trước thời gian dự kiến.",
@@ -149,7 +170,10 @@ export const PRODUCTS = [
     {
         id: 8,
         type: "Nhà hàng",
-        duration: "15/07/2023 - 30/08/2023",
+        duration: {
+            startDate: new Date(2023, 6, 1),
+            endDate: new Date(2023, 6, 30),
+        },
         title: "Voucher giảm 20% set Valentine's special menu",
         description1: "Giảm 20% Set Valentine’s Special Menu tại Nhà hàng Ruby (Giá gốc: 2,500,000đ/set/02 người chỉ còn 2,000,000đ/set/02 người).",
         description2: "Do giới hạn số lượng voucher, chương trình có thể kết thúc trước thời gian dự kiến.",
@@ -169,7 +193,10 @@ export const PRODUCTS = [
     {
         id: 9,
         type: "Thức uống",
-        duration: "01/07/2023 - 30/07/2023",
+        duration: {
+            startDate: new Date(2023, 6, 1),
+            endDate: new Date(2023, 6, 30),
+        },
         title: "Voucher giảm 25k Highlands",
         description1: "Voucher áp dụng khi mua hóa đơn từ 120K đồ uống Highland sẽ được giảm 25K.",
         description2: "Khách hàng có thể trả thêm tiền để đổi ly cỡ nhỏ trong combo sang cỡ vừa hoặc lớn.",
@@ -189,7 +216,10 @@ export const PRODUCTS = [
     {
         id: 10,
         type: "Công nghệ",
-        duration: "01/07/2023 - 15/07/2023",
+        duration: {
+            startDate: new Date(2023, 6, 1),
+            endDate: new Date(2023, 6, 30),
+        },
         title: "Voucher giảm 2 triệu Samsung Galaxy S23",
         description1: "Voucher áp dụng khi mua hóa đơn từ 120K đồ uống Highland sẽ được giảm 25K.",
         description2: "Khách hàng có thể trả thêm tiền để đổi ly cỡ nhỏ trong combo sang cỡ vừa hoặc lớn.",
@@ -209,7 +239,10 @@ export const PRODUCTS = [
     {
         id: 11,
         type: "Nhà hàng",
-        duration: "15/07/2023 - 30/08/2023",
+        duration: {
+            startDate: new Date(2023, 6, 1),
+            endDate: new Date(2023, 6, 30),
+        },
         title: "Voucher giảm 20% set Valentine's special menu",
         description1: "Voucher áp dụng khi mua hóa đơn từ 120K đồ uống Highland sẽ được giảm 25K.",
         description2: "Khách hàng có thể trả thêm tiền để đổi ly cỡ nhỏ trong combo sang cỡ vừa hoặc lớn.",
@@ -229,7 +262,10 @@ export const PRODUCTS = [
     {
         id: 12,
         type: "Thời trang",
-        duration: "15/07/2023 - 15/08/2023",
+        duration: {
+            startDate: new Date(2023, 6, 1),
+            endDate: new Date(2023, 6, 30),
+        },
         title: "Voucher giảm thêm 110k trên giá đã giảm",
         description1: "Voucher áp dụng khi mua hóa đơn từ 120K đồ uống Highland sẽ được giảm 25K.",
         description2: "Khách hàng có thể trả thêm tiền để đổi ly cỡ nhỏ trong combo sang cỡ vừa hoặc lớn.",
@@ -247,4 +283,7 @@ export const PRODUCTS = [
         image: productImageFashionNike,
     }
 
-]
+];
+
+
+
