@@ -55,7 +55,7 @@ const Button = styled.button`
   margin-top: 20px;
   text-align: center;
   height: 40px;
-  width: 110px;
+  width: 140px;
   color: white;
   background: #f3692e;
   cursor: pointer;
@@ -105,29 +105,33 @@ const Description = () => {
           <Guide>Cách nhận và sử dụng voucher </Guide>
 
           <Desc>
-            {product.guide1} <br></br>
-            {product.guide2} <br></br>
-            {product.guide3} <br></br>
-            {product.guide4} <br></br>
-            {product.guide5} <br></br>
+            {product.guide1} <br />
+            {product.guide2} <br />
+            {product.guide3} <br />
+            {product.guide4} <br />
+            {product.guide5} <br />
           </Desc>
         </ImgContainer>
 
         <InfoContainer>
           <Title> {product.title} </Title>
+
           <Desc>
-            {product.description1} <br></br>- {product.description2} <br></br>-{" "}
-            {product.description3} <br></br> <br></br>
+            {product.description1} <br /> <br />
+            {product.description2} <br /> <br />
+            {product.description3} <br /> <br />
             <FontAwesomeIcon
               icon={faLocationDot}
               style={{ color: "#ff0000" }}
             />{" "}
-            {product.time} <br></br>
+            {product.time} <br />
           </Desc>
+
           <Price>
             {" "}
             {product.price} <FontAwesomeIcon icon={faCoins} />
           </Price>
+
           <AddContainer>
             <Button
               className={`pro_bth ${isCodeReceived ? "code-received" : ""}`}
@@ -135,19 +139,18 @@ const Description = () => {
             >
               {isCodeReceived
                 ? "ĐÃ LẤY MÃ"
-                : `NHẬN MÃ NGAY${
-                    cartItems[PRODUCTS.id] > 0
-                      ? ` (${cartItems[PRODUCTS.id]})`
-                      : ""
-                  }`}
+                : `NHẬN MÃ NGAY${cartItems[PRODUCTS.id] > 0
+                  ? ` (${cartItems[PRODUCTS.id]})`
+                  : ""
+                }`}
             </Button>
           </AddContainer>
-          <br></br> <br></br>
+          <br /> <br />
           <Condition> Điều kiện áp dụng </Condition>
           <Desc>
-            {product.condition1} <br></br> <br></br>
-            {product.condition2} <br></br> <br></br>
-            {product.condition3} <br></br> <br></br>
+            {product.condition1} <br /> <br />
+            {product.condition2} <br /> <br />
+            {product.condition3} <br /> <br />
           </Desc>
         </InfoContainer>
       </Wrapper>

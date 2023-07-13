@@ -25,7 +25,7 @@ class Footer extends React.Component {
 
                     <div class="col">
                         <h4>Về Student Deal</h4>
-                        <a href="#">Giới thiệu về Student Deal</a>
+                        <a href="/about">Giới thiệu về Student Deal</a>
                         <a href="#">Các nhà cung cấp</a>
                         <a href="#">Liên hệ truyền thông</a>
                         <a href="#">Liên hệ liên kết</a>

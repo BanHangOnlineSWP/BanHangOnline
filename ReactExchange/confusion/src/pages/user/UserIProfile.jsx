@@ -3,10 +3,10 @@ import './UserProfile.css';
 function UserProfile() {
 
   return (
-    <main>
-      <section class="py-5 my-5">
+    <main className='pt-1'>
+      <section class="py-0 my-0">
         <div class="container">
-          <h2 class="mb-5">Hồ sơ của tôi</h2>
+          <h2 class="mb-4">Hồ sơ của tôi</h2>
 
           <div class="bg-white shadow rounded-lg d-block d-sm-flex">
             <div class="profile-tab-nav border-right">
@@ -28,16 +28,6 @@ function UserProfile() {
                   <i class="fa fa-key text-center mr-1"></i>
                   Đổi mật khẩu
                 </a>
-
-                {/* <a class="nav-link" id="security-tab" data-toggle="pill" href="#security" role="tab" aria-controls="security" aria-selected="false">
-                  <i class="fa fa-user text-center mr-1"></i>
-                  Security
-                </a> */}
-
-                {/* <a class="nav-link" id="application-tab" data-toggle="pill" href="#application" role="tab" aria-controls="application" aria-selected="false">
-                  <i class="fa fa-tv text-center mr-1"></i>
-                  Application
-                </a> */}
 
                 <a class="nav-link" id="notification-tab" data-toggle="pill" href="#notification" role="tab" aria-controls="notification" aria-selected="false">
                   <i class="fa fa-bell text-center mr-1"></i>
