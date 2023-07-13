@@ -5,11 +5,17 @@ import productImageDrinkPL from './assets/product/PhucLong.png';
 import productImageFashionNike from './assets/product/ma-giam-gia-nike.jpg';
 import productImageFashionCoolmate from './assets/product/coolmate-shark-tank-9.jpg';
 
+
+
 export const PRODUCTS = [
+
     {
         id: 1,
         type: "Thức uống",
-        duration: "01/07/2023 - 30/07/2023",
+        duration: {
+            startDate: new Date(2023, 2 - 1, 1),
+            endDate: new Date(2023, 6 - 1, 30),
+        },
         title: "Voucher giảm 25k Highlands",
         description1: "Voucher áp dụng khi mua hóa đơn từ 120K đồ uống Highland sẽ được giảm 25K.",
         description2: "Khách hàng có thể trả thêm tiền để đổi ly cỡ nhỏ trong combo sang cỡ vừa hoặc lớn.",
@@ -29,7 +35,10 @@ export const PRODUCTS = [
     {
         id: 2,
         type: "Công nghệ",
-        duration: "01/07/2023 - 15/07/2023",
+        duration: {
+            startDate: new Date(2023, 7 - 1, 1),
+            endDate: new Date(2023, 8 - 1, 30),
+        },
         title: "Voucher giảm 2 triệu Samsung Galaxy S23",
         description1: "Voucher áp dụng khi mua hóa đơn từ 120K đồ uống Highland sẽ được giảm 25K.",
         description2: "Khách hàng có thể trả thêm tiền để đổi ly cỡ nhỏ trong combo sang cỡ vừa hoặc lớn.",
@@ -49,7 +58,10 @@ export const PRODUCTS = [
     {
         id: 3,
         type: "Nhà hàng",
-        duration: "15/07/2023 - 30/08/2023",
+        duration: {
+            startDate: new Date(2023, 6, 1),
+            endDate: new Date(2023, 6, 30),
+        },
         title: "Voucher giảm 20% set Valentine's special menu",
         description1: "Voucher áp dụng khi mua hóa đơn từ 120K đồ uống Highland sẽ được giảm 25K.",
         description2: "Khách hàng có thể trả thêm tiền để đổi ly cỡ nhỏ trong combo sang cỡ vừa hoặc lớn.",
@@ -69,7 +81,10 @@ export const PRODUCTS = [
     {
         id: 4,
         type: "Thời trang",
-        duration: "15/07/2023 - 15/08/2023",
+        duration: {
+            startDate: new Date(2023, 6, 1),
+            endDate: new Date(2023, 6, 30),
+        },
         title: "Voucher giảm thêm 110k trên giá đã giảm",
         description1: "Voucher áp dụng khi mua hóa đơn từ 120K đồ uống Highland sẽ được giảm 25K.",
         description2: "Khách hàng có thể trả thêm tiền để đổi ly cỡ nhỏ trong combo sang cỡ vừa hoặc lớn.",
@@ -89,7 +104,10 @@ export const PRODUCTS = [
     {
         id: 5,
         type: "Thời trang",
-        duration: "01/07/2023 - 30/07/2023",
+        duration: {
+            startDate: new Date(2023, 6, 1),
+            endDate: new Date(2023, 6, 30),
+        },
         title: "Voucher giảm 110k cho đơn hàng từ 550k",
         description1: "Voucher áp dụng khi mua hóa đơn từ 120K đồ uống Highland sẽ được giảm 25K.",
         description2: "Khách hàng có thể trả thêm tiền để đổi ly cỡ nhỏ trong combo sang cỡ vừa hoặc lớn.",
@@ -109,7 +127,10 @@ export const PRODUCTS = [
     {
         id: 6,
         type: "Thức uống",
-        duration: "01/07/2023 - 30/07/2023",
+        duration: {
+            startDate: new Date(2023, 6, 1),
+            endDate: new Date(2023, 6, 30),
+        },
         title: "Voucher giảm 20k đồ uống Phúc Long siêu chất",
         description1: "Voucher áp dụng khi mua hóa đơn từ 120K đồ uống Highland sẽ được giảm 25K.",
         description2: "Khách hàng có thể trả thêm tiền để đổi ly cỡ nhỏ trong combo sang cỡ vừa hoặc lớn.",
@@ -129,7 +150,10 @@ export const PRODUCTS = [
     {
         id: 7,
         type: "Công nghệ",
-        duration: "01/07/2023 - 30/07/2023",
+        duration: {
+            startDate: new Date(2023, 6, 1),
+            endDate: new Date(2023, 6, 30),
+        },
         title: "Voucher giảm 2 triệu Samsung Galaxy S23 Series",
         description1: "Voucher áp dụng khi mua hóa đơn từ 120K đồ uống Highland sẽ được giảm 25K.",
         description2: "Khách hàng có thể trả thêm tiền để đổi ly cỡ nhỏ trong combo sang cỡ vừa hoặc lớn.",
@@ -148,7 +172,10 @@ export const PRODUCTS = [
     {
         id: 8,
         type: "Nhà hàng",
-        duration: "01/07/2023 - 30/07/2023",
+        duration: {
+            startDate: new Date(2023, 6, 1),
+            endDate: new Date(2023, 6, 30),
+        },
         title: "Voucher giảm 20% set Valentine's special menu",
         description1: "Voucher áp dụng khi mua hóa đơn từ 120K đồ uống Highland sẽ được giảm 25K.",
         description2: "Khách hàng có thể trả thêm tiền để đổi ly cỡ nhỏ trong combo sang cỡ vừa hoặc lớn.",
@@ -168,7 +195,10 @@ export const PRODUCTS = [
     {
         id: 9,
         type: "Thức uống",
-        duration: "01/07/2023 - 30/07/2023",
+        duration: {
+            startDate: new Date(2023, 6, 1),
+            endDate: new Date(2023, 6, 30),
+        },
         title: "Voucher giảm 25k Highlands",
         description1: "Voucher áp dụng khi mua hóa đơn từ 120K đồ uống Highland sẽ được giảm 25K.",
         description2: "Khách hàng có thể trả thêm tiền để đổi ly cỡ nhỏ trong combo sang cỡ vừa hoặc lớn.",
@@ -188,7 +218,10 @@ export const PRODUCTS = [
     {
         id: 10,
         type: "Công nghệ",
-        duration: "01/07/2023 - 15/07/2023",
+        duration: {
+            startDate: new Date(2023, 6, 1),
+            endDate: new Date(2023, 6, 30),
+        },
         title: "Voucher giảm 2 triệu Samsung Galaxy S23",
         description1: "Voucher áp dụng khi mua hóa đơn từ 120K đồ uống Highland sẽ được giảm 25K.",
         description2: "Khách hàng có thể trả thêm tiền để đổi ly cỡ nhỏ trong combo sang cỡ vừa hoặc lớn.",
@@ -208,7 +241,10 @@ export const PRODUCTS = [
     {
         id: 11,
         type: "Nhà hàng",
-        duration: "15/07/2023 - 30/08/2023",
+        duration: {
+            startDate: new Date(2023, 6, 1),
+            endDate: new Date(2023, 6, 30),
+        },
         title: "Voucher giảm 20% set Valentine's special menu",
         description1: "Voucher áp dụng khi mua hóa đơn từ 120K đồ uống Highland sẽ được giảm 25K.",
         description2: "Khách hàng có thể trả thêm tiền để đổi ly cỡ nhỏ trong combo sang cỡ vừa hoặc lớn.",
@@ -228,7 +264,10 @@ export const PRODUCTS = [
     {
         id: 12,
         type: "Thời trang",
-        duration: "15/07/2023 - 15/08/2023",
+        duration: {
+            startDate: new Date(2023, 6, 1),
+            endDate: new Date(2023, 6, 30),
+        },
         title: "Voucher giảm thêm 110k trên giá đã giảm",
         description1: "Voucher áp dụng khi mua hóa đơn từ 120K đồ uống Highland sẽ được giảm 25K.",
         description2: "Khách hàng có thể trả thêm tiền để đổi ly cỡ nhỏ trong combo sang cỡ vừa hoặc lớn.",
@@ -246,4 +285,7 @@ export const PRODUCTS = [
         image: productImageFashionNike,
     }
 
-]
+];
+
+
+
