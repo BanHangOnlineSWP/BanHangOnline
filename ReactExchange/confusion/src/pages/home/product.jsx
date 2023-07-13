@@ -1,5 +1,4 @@
 import React from "react";
-// import { ShopContext } from "../../context/shop-context";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock } from "@fortawesome/free-solid-svg-icons";
@@ -7,7 +6,8 @@ import LinearDeterminate from "../../components/progress/Progress";
 
 export const Product = (props) => {
   const { id, type, title, duration, image } = props.data || {};
-  const { startDate, endDate } = duration || {};
+  const startDate = duration?.startDate || new Date();
+  const endDate = duration?.endDate || new Date();
 
   // Adjust the month values by subtracting 1
   const formattedStartDate = new Date(
