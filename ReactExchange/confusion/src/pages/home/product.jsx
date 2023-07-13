@@ -10,7 +10,7 @@ export const Product = (props) => {
 
   return (
     <div className="pro" key={id}>
-      <img className="pro_img" src={image} />
+      <img className="pro_img" src={image} alt=""/>
 
       <div className="des">
         <p>{type}</p>
@@ -20,12 +20,12 @@ export const Product = (props) => {
         </p>
 
         <Link to={`description/${id}`}>
-          <h4>{title}</h4>
+          <h4 style={{fontWeight: "bold"}}>{title}</h4>
         </Link>
       </div>
       <div>
         <div>
-          <LinearDeterminate />
+          <LinearDeterminate/>
         </div>
       </div>
     </div>
