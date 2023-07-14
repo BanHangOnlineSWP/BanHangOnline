@@ -21,10 +21,10 @@ const Arrow = styled.div`
   align-items: center;
   justify-content: center;
   position: absolute;
-  top: 0;
+  top: 20px;
   bottom: 0;
-  left: ${(props) => props.direction === "left" && "10px"};
-  right: ${(props) => props.direction === "right" && "10px"};
+  left: ${(props) => props.direction === "left" && "30px"};
+  right: ${(props) => props.direction === "right" && "50px"};
   margin: auto;
   cursor: pointer;
   opacity: 0.5;
@@ -43,12 +43,13 @@ const Slide = styled.div`
   height: 100vh;
   display: flex;
   align-items: center;
+
   //   background-color: #${(props) => props.bg};
 `;
 
 const ImgContainer = styled.div`
   margin-top: 50px;
-  margin-left: 30px;
+  justify-content: space-between;
   height: 100%;
   flex: 1;
   border-radius: 30px;
@@ -56,13 +57,14 @@ const ImgContainer = styled.div`
 
 const Image = styled.img`
   height: 80%;
-  width: 1100px;
+  width: 80%;
   border-radius: 30px;
+  margin-left: 20px;
 `;
 
 const InfoContainer = styled.div`
   flex: 1;
-  padding: 50px;
+  // padding: 50px;
 `;
 
 const Title = styled.h1`
@@ -98,7 +100,6 @@ const Slider = () => {
       <Arrow
         direction="left"
         onClick={() => handleClick("left")}
-        style={{ marginLeft: "30px" }}
       >
         <ArrowLeftOutlined />
       </Arrow>
@@ -114,7 +115,6 @@ const Slider = () => {
       <Arrow
         direction="right"
         onClick={() => handleClick("right")}
-        style={{ marginRight: "30px" }}
       >
         <ArrowRightOutlined />
       </Arrow>

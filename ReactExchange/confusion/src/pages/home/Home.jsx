@@ -2,8 +2,9 @@ import React from "react";
 import "./Home.css";
 import { PRODUCTS } from "../../products";
 import { Product } from "./product";
-import Slider from "../../components/Slider/Slider";
-import SliderFeedback from "../../components/Slider/SliderFeedback";
+import Slider from "../../components/slider/Slider";
+import SliderFeedback from "../../components/slider/SliderFeedback";
+
 function Home() {
   return (
     <main>
@@ -103,24 +104,9 @@ function Home() {
           <img src="assets/img/partner/travelloka.png" />
         </div>
       </div>
-      {/* FEEDBACK  */}
+
       <div class="feedback-all">
         <SliderFeedback />
-        {/* <div class="feedback">
-          <img src="assets/img/feedback/feedback1.png" />
-          
-          <article class="feedback-description">
-            <div class="feedback-detail"> Đánh giá của sinh viên</div>
-            <div class="feedback-desc">
-              I am very happy with the services provided, it is very helpful,
-              starting from the insight that the company gave from the start
-              that I did not understand what it was so I got knowledge and made
-              my website look better
-            </div>
-            <div class="feedback-name">Anna Saraspova</div>
-            <div class="feedback-crear">Sinh viên đại học FPT</div>
-          </article>
-        </div> */}
       </div>
     </main>
   );

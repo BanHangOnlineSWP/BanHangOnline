@@ -1,43 +1,45 @@
-import React, { useContext, useState, useEffect } from "react";
-import { ShopContext } from "../../context/shop-context";
-import { NavLink} from "react-router-dom";
+import React from "react";
+import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faClock } from "@fortawesome/free-solid-svg-icons";
+import LinearDeterminate from "../../components/progress/Progress";
 
 export const Product = (props) => {
-  const { id, productDetail, productType, productImage } = props.data;
-  const { addToCart, cartItems } = useContext(ShopContext);
+  const { id, type, title, duration, image } = props.data || {};
+  const startDate = duration?.startDate || new Date();
+  const endDate = duration?.endDate || new Date();
 
-  // const cartItemCount = cartItems[id]
-
-  const [isCodeReceived, setIsCodeReceived] = useState(false);
-
-  useEffect(() => {
-    setIsCodeReceived(cartItems[id] > 0);
-  }, [cartItems, id]);
-
-  const handleAddToCart = () => {
-    addToCart(id);
-    setIsCodeReceived(true);
-  };
+  // Adjust the month values by subtracting 1
+  const formattedStartDate = new Date(
+    startDate.getFullYear(),
+    startDate.getMonth() - 1,
+    startDate.getDate()
+  );
+  const formattedEndDate = new Date(
+    endDate.getFullYear(),
+    endDate.getMonth() - 1,
+    endDate.getDate()
+  );
 
   return (
     <div className="pro" key={id}>
-      <img className="pro_img" src={productImage} />
+      <img className="pro_img" src={image} alt=""/>
+
       <div className="des">
-        <p>{productType}</p>
+        <p>{type}</p>
+        <p>
+          <FontAwesomeIcon icon={faClock} style={{ color: "#f99b43" }} />{" "}
+          {formattedStartDate.toLocaleDateString()} -{" "}
+          {formattedEndDate.toLocaleDateString()}
+        </p>
 
-        <NavLink to="/description">
-          <h4>{productDetail}</h4>
-        </NavLink>
-
-        <div className="pro_active">
-          <button
-            className={`pro_bth ${isCodeReceived ? "code-received" : ""}`}
-            onClick={isCodeReceived ? undefined : handleAddToCart}
-          >
-            {isCodeReceived
-              ? "ĐÃ LẤY MÃ"
-              : `NHẬN MÃ NGAY${cartItems[id] > 0 ? ` (${cartItems[id]})` : ""}`}
-          </button>
+        <Link to={`description/${id}`}>
+          <h4 style={{fontWeight: "bold"}}>{title}</h4>
+        </Link>
+      </div>
+      <div>
+        <div>
+          <LinearDeterminate/>
         </div>
       </div>
     </div>
