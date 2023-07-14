@@ -19,12 +19,12 @@ function Home() {
           <h1 class="product-detail">Our Voucher Collection</h1>
           <ul class="nav-list">
             <li>
-              <a href="index.html" class="active">
+              <a href="/" class="active">
                 Tất cả
               </a>
             </li>
             <li>
-              <a href="#">Thời trang</a>
+              <a href="/fashion">Thời trang</a>
             </li>
             <li>
               <a href="#">Công nghệ và điện tử</a>

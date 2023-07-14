@@ -1,9 +1,8 @@
 import React, { useContext, useState, useEffect } from "react";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCoins, faLocationDot } from "@fortawesome/free-solid-svg-icons";
+import { faCoins, faClock } from "@fortawesome/free-solid-svg-icons";
 import { useParams } from "react-router-dom";
-import { Details } from "../../details";
 import { ShopContext } from "../../context/shop-context";
 import { PRODUCTS } from "../../products";
 
@@ -79,7 +78,7 @@ const Guide = styled.h3`
   font-weight: 500;
 `;
 
-const Description = () => {
+const Description = (props) => {
   const { addToCart, cartItems } = useContext(ShopContext);
   const [isCodeReceived, setIsCodeReceived] = useState(false);
   const { id } = useParams();
@@ -96,6 +95,23 @@ const Description = () => {
     addToCart(id);
     setIsCodeReceived(true);
   };
+
+  const { duration } = props.data || {};
+  const startDate = duration?.startDate || new Date();
+  const endDate = duration?.endDate || new Date();
+
+  // Adjust the month values by subtracting 1
+  const formattedStartDate = new Date(
+    startDate.getFullYear(),
+    startDate.getMonth() - 1,
+    startDate.getDate()
+  );
+  const formattedEndDate = new Date(
+    endDate.getFullYear(),
+    endDate.getMonth() - 1,
+    endDate.getDate()
+  );
+
   return (
     <Container>
       <Wrapper>
@@ -120,11 +136,9 @@ const Description = () => {
             {product.description1} <br /> <br />
             {product.description2} <br /> <br />
             {product.description3} <br /> <br />
-            <FontAwesomeIcon
-              icon={faLocationDot}
-              style={{ color: "#ff0000" }}
-            />{" "}
-            {product.time} <br />
+            <FontAwesomeIcon icon={faClock} style={{ color: "#f99b43" }} />{" "}
+            {formattedStartDate.toLocaleDateString()} - {" "}
+            {formattedEndDate.toLocaleDateString()} <br />
           </Desc>
 
           <Price>

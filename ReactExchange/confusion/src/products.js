@@ -5,8 +5,6 @@ import productImageDrinkPL from './assets/product/PhucLong.png';
 import productImageFashionNike from './assets/product/ma-giam-gia-nike.jpg';
 import productImageFashionCoolmate from './assets/product/coolmate-shark-tank-9.jpg';
 
-
-
 export const PRODUCTS = [
 
     {
@@ -28,7 +26,6 @@ export const PRODUCTS = [
         guide3: "Bước 3: Vào My Vouchers và nhấn voucher đã nhận.",
         guide4: "Bước 4: Nó sẽ hiện ra mã Code.",
         guide5: "Bước 5: Xuất trình mã code của voucher tại cửa hàng được ủy quyền để sử dụng ưu đãi.",
-        time: "Thời gian áp dụng: Từ 01/07/2023 đến hết 15/07/2023.",
         price: "20",
         image: productImageDrinkHL,
     },
@@ -48,7 +45,6 @@ export const PRODUCTS = [
         guide3: "Bước 3: Vào My Vouchers và nhấn voucher đã nhận.",
         guide4: "Bước 4: Nó sẽ hiện ra mã Code.",
         guide5: "Bước 5: Xuất trình mã code của voucher tại cửa hàng được ủy quyền để sử dụng ưu đãi.",
-        time: "Thời gian áp dụng: Từ 01/07/2023 đến hết 15/07/2023.",
         price: "50",
         image: productImageTech,
     },
@@ -71,7 +67,6 @@ export const PRODUCTS = [
         guide3: "Bước 3: Vào My Vouchers và nhấn voucher đã nhận.",
         guide4: "Bước 4: Nó sẽ hiện ra mã Code.",
         guide5: "Bước 5: Xuất trình mã code của voucher tại cửa hàng được ủy quyền để sử dụng ưu đãi.",
-        time: "Thời gian áp dụng: Từ 01/07/2023 đến hết 15/07/2023.",
         price: "50",
         image: productImageFood,
     },
@@ -94,7 +89,6 @@ export const PRODUCTS = [
         guide3: "Bước 3: Vào My Vouchers và nhấn voucher đã nhận.",
         guide4: "Bước 4: Nó sẽ hiện ra mã Code.",
         guide5: "Bước 5: Xuất trình mã code của voucher tại cửa hàng được ủy quyền để sử dụng ưu đãi.",
-        time: "Thời gian áp dụng: Từ 01/07/2023 đến hết 15/07/2023.",
         price: "50",
         image: productImageFashionNike,
     },
@@ -117,7 +111,6 @@ export const PRODUCTS = [
         guide3: "Bước 3: Vào My Vouchers và nhấn voucher đã nhận.",
         guide4: "Bước 4: Nó sẽ hiện ra mã Code.",
         guide5: "Bước 5: Xuất trình mã code của voucher tại cửa hàng được ủy quyền để sử dụng ưu đãi.",
-        time: "Thời gian áp dụng: Từ 01/07/2023 đến hết 15/07/2023.",
         price: "50",
         image: productImageFashionCoolmate,
     },
@@ -140,7 +133,6 @@ export const PRODUCTS = [
         guide3: "Bước 3: Vào My Vouchers và nhấn voucher đã nhận.",
         guide4: "Bước 4: Nó sẽ hiện ra mã Code.",
         guide5: "Bước 5: Xuất trình mã code của voucher tại cửa hàng được ủy quyền để sử dụng ưu đãi.",
-        time: "Thời gian áp dụng: Từ 01/07/2023 đến hết 15/07/2023.",
         price: "50",
         image: productImageDrinkPL,
     },
@@ -163,7 +155,6 @@ export const PRODUCTS = [
         guide3: "Bước 3: Vào My Vouchers và nhấn voucher đã nhận.",
         guide4: "Bước 4: Nó sẽ hiện ra mã Code.",
         guide5: "Bước 5: Xuất trình mã code của voucher tại cửa hàng được ủy quyền để sử dụng ưu đãi.",
-        time: "Thời gian áp dụng: Từ 01/07/2023 đến hết 15/07/2023.",
         price: "50",
         image: productImageTech,
     },
@@ -186,7 +177,6 @@ export const PRODUCTS = [
         guide3: "Bước 3: Vào My Vouchers và nhấn voucher đã nhận.",
         guide4: "Bước 4: Nó sẽ hiện ra mã Code.",
         guide5: "Bước 5: Xuất trình mã code của voucher tại cửa hàng được ủy quyền để sử dụng ưu đãi.",
-        time: "Thời gian áp dụng: Từ 01/07/2023 đến hết 15/07/2023.",
         price: "50",
         image: productImageFood,
     },
@@ -209,7 +199,6 @@ export const PRODUCTS = [
         guide3: "Bước 3: Vào My Vouchers và nhấn voucher đã nhận.",
         guide4: "Bước 4: Nó sẽ hiện ra mã Code.",
         guide5: "Bước 5: Xuất trình mã code của voucher tại cửa hàng được ủy quyền để sử dụng ưu đãi.",
-        time: "Thời gian áp dụng: Từ 01/07/2023 đến hết 15/07/2023.",
         price: "20",
         image: productImageDrinkHL,
     },
@@ -232,7 +221,6 @@ export const PRODUCTS = [
         guide3: "Bước 3: Vào My Vouchers và nhấn voucher đã nhận.",
         guide4: "Bước 4: Nó sẽ hiện ra mã Code.",
         guide5: "Bước 5: Xuất trình mã code của voucher tại cửa hàng được ủy quyền để sử dụng ưu đãi.",
-        time: "Thời gian áp dụng: Từ 01/07/2023 đến hết 15/07/2023.",
         price: "50",
         image: productImageTech,
     },
@@ -255,7 +243,6 @@ export const PRODUCTS = [
         guide3: "Bước 3: Vào My Vouchers và nhấn voucher đã nhận.",
         guide4: "Bước 4: Nó sẽ hiện ra mã Code.",
         guide5: "Bước 5: Xuất trình mã code của voucher tại cửa hàng được ủy quyền để sử dụng ưu đãi.",
-        time: "Thời gian áp dụng: Từ 01/07/2023 đến hết 15/07/2023.",
         price: "50",
         image: productImageFood,
     },
@@ -278,12 +265,8 @@ export const PRODUCTS = [
         guide3: "Bước 3: Vào My Vouchers và nhấn voucher đã nhận.",
         guide4: "Bước 4: Nó sẽ hiện ra mã Code.",
         guide5: "Bước 5: Xuất trình mã code của voucher tại cửa hàng được ủy quyền để sử dụng ưu đãi.",
-        time: "Thời gian áp dụng: Từ 01/07/2023 đến hết 15/07/2023.",
         price: "50",
         image: productImageFashionNike,
     }
 
 ];
-
-
-

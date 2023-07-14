@@ -1,10 +1,10 @@
-section{
+section {
 	background: #f9f9f9;
 	width: 100%;
 	font-family: "Roboto", sans-serif;
 }
 
-.container{
+.container {
 	margin-top: 0;
 }
 
@@ -30,21 +30,21 @@ section{
 	border-bottom: 1px solid #ddd;
 	border-radius: 0;
 	/* color: #333; */
-    color: #F3692E;
+	color: #F3692E;
 }
 
 .nav-pills a.nav-link i {
 	width: 20px;
 }
 
-.nav-link:hover{
+.nav-link:hover {
 	color: #F3692E;
-    background: #f1c952;
+	background: #f1c952;
 }
 
-.nav-link.active.show{
+.nav-link.active.show {
 	color: #F3692E;
-    background: #f1c952;
+	background: #f1c952;
 }
 
 .img-circle img {
@@ -54,13 +54,13 @@ section{
 	border: 5px solid #fff;
 }
 
-.btn-primary{
+.btn-primary {
 	color: #f1c952;
-    background: #F3692E;
+	background: #F3692E;
 	border: none;
 }
 
-.btn-primary:hover{
+.btn-primary:hover {
 	color: #F3692E;
-    background: #f1c952;
+	background: #f1c952;
 }

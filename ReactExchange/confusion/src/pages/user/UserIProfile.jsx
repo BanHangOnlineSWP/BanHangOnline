@@ -3,17 +3,17 @@ import './UserProfile.css';
 function UserProfile() {
 
   return (
-    <main className='pt-1'>
+    <main className='pt-0'>
       <section class="py-0 my-0">
-        <div class="container">
-          <h2 class="mb-4">Hồ sơ của tôi</h2>
+        <div class="container mb-2">
+          <h2 class="mb-2">Hồ sơ của tôi</h2>
 
           <div class="bg-white shadow rounded-lg d-block d-sm-flex">
             <div class="profile-tab-nav border-right">
 
               <div class="p-4">
                 <div class="img-circle text-center mb-3">
-                  <img src='assets\img\login\Avatar.jpg' alt='Image' class="shadow"/>
+                  <img src='assets\img\login\Avatar.jpg' alt='' class="shadow"/>
                 </div>
                 <h4 class="text-center">Bích Phương</h4>
               </div>

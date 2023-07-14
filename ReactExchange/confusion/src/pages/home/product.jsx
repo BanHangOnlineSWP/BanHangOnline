@@ -29,7 +29,7 @@ export const Product = (props) => {
         <p>{type}</p>
         <p>
           <FontAwesomeIcon icon={faClock} style={{ color: "#f99b43" }} />{" "}
-          {formattedStartDate.toLocaleDateString()} -{" "}
+          {formattedStartDate.toLocaleDateString()} -
           {formattedEndDate.toLocaleDateString()}
         </p>
 
