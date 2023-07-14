@@ -36,6 +36,7 @@ export const Cart = () => {
   const navigate = useNavigate();
 
   const [toggleState, setToggleState] = useState(1);
+  const [feedbackGiven, setFeedbackGiven] = useState(false); // Trạng thái hiển thị của nút Feedback
 
   const toggleTab = (index) => {
     setToggleState(index);
@@ -50,6 +51,7 @@ export const Cart = () => {
     console.log(voucherDaSuDungItems);
     removeFromCart(productId);
     updateCartItemCount(0, productId);
+    alert("Bạn đã dùng sản phẩm. Cảm ơn bạn đã sử dụng!");
   };
 
   //Cập nhật voucher đã hết hạn
@@ -65,6 +67,10 @@ export const Cart = () => {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+
+  const handleFeedbackGiven = () => {
+    setFeedbackGiven(true);
+  };
 
   return (
     <div className="container">
@@ -109,8 +115,8 @@ export const Cart = () => {
                         <p className="cart-detail">{product.title}</p>
                         <p className="cart-date">
                           Date:{" "}
-                          {product.duration.startDate.toLocaleDateString()} -{" "}
-                          {product.duration.endDate.toLocaleDateString()}
+                          {product.duration.startDate?.toLocaleDateString()} -{" "}
+                          {product.duration.endDate?.toLocaleDateString()}
                         </p>
                         <ul className="cart-bth">
                           <button onClick={() => removeFromCart(product.id)}>
@@ -156,37 +162,46 @@ export const Cart = () => {
                     <div className="cart-des">
                       <p className="cart-detail">{item.title}</p>
                       <p className="cart-date">
-                        Date: {item.duration.startDate.toLocaleDateString()} -{" "}
-                        {item.duration.endDate.toLocaleDateString()}
+                        Date: {item.duration.startDate?.toLocaleDateString()} -{" "}
+                        {item.duration.endDate?.toLocaleDateString()}
                       </p>
-                      <ul className=" cart-bth">
+                      <ul className="cart-bth-used">
                         <p>ĐÃ SỬ DỤNG</p>
-                        <Button
-                          onClick={handleOpen}
-                          sx={{
-                            width: 170,
-                            maxWidth: "100%",
-                          }}
-                        >
-                          Feedback
-                        </Button>
-                        <Modal
-                          open={open}
-                          onClose={handleClose}
-                          aria-labelledby="modal-modal-title"
-                          aria-describedby="modal-modal-description"
-                        >
-                          <Box sx={style}>
-                            <Typography
-                              id="modal-modal-title"
-                              variant="h6"
-                              component="h2"
+                        <button>
+                          {!feedbackGiven ? (
+                            <Button
+                              onClick={() => {
+                                handleOpen();
+                                handleFeedbackGiven();
+                              }}
+                              sx={{
+                                width: 170,
+                                maxWidth: "100%",
+                              }}
                             >
-                              ĐÁNH GIÁ VOUCHER
-                            </Typography>
-                            <Feedback />
-                          </Box>
-                        </Modal>
+                              Feedback
+                            </Button>
+                          ) : (
+                            <Button disabled>Feedback</Button>
+                          )}
+                          <Modal
+                            open={open}
+                            onClose={handleClose}
+                            aria-labelledby="modal-modal-title"
+                            aria-describedby="modal-modal-description"
+                          >
+                            <Box sx={style}>
+                              <Typography
+                                id="modal-modal-title"
+                                variant="h6"
+                                component="h2"
+                              >
+                                ĐÁNH GIÁ VOUCHER
+                              </Typography>
+                              <Feedback />
+                            </Box>
+                          </Modal>
+                        </button>
                       </ul>
                     </div>
                   </div>
@@ -219,8 +234,9 @@ export const Cart = () => {
                         <div className="cart-des">
                           <p className="cart-detail">{item.title}</p>
                           <p className="cart-date">
-                            Date: {item.duration.startDate.toLocaleDateString()}{" "}
-                            - {item.duration.endDate.toLocaleDateString()}
+                            Date:{" "}
+                            {item.duration.startDate?.toLocaleDateString()} -{" "}
+                            {item.duration.endDate?.toLocaleDateString()}
                           </p>
                           <ul className=" cart-bth-used">
                             <p>ĐÃ HẾT HẠN</p>
