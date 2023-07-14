@@ -137,7 +137,7 @@ export const Cart = () => {
               <div className="continue">
                 <button onClick={() => navigate("/")}>
                   {" "}
-                  TIẾP TỤC MUA SẮM{" "}
+                  TIẾP TỤC LẤY VOUCHER{" "}
                 </button>
               </div>
             ) : (
@@ -214,7 +214,7 @@ export const Cart = () => {
             </div>
           </div>
           <div className="continue">
-            <button onClick={() => navigate("/")}> TIẾP TỤC MUA SẮM </button>
+            <button onClick={() => navigate("/")}> TIẾP TỤC LẤY VOUCHER </button>
           </div>
         </div>
 
