@@ -2,7 +2,7 @@ import React from "react";
 import "./UserProfile.css";
 function UserProfile() {
   return (
-    <main className="pt-0">
+    <main className="pt-0 mb-5">
       <section class="py-0 my-0">
         <div class="container mb-2">
           <h2 class="mb-2">Hồ sơ của tôi</h2>

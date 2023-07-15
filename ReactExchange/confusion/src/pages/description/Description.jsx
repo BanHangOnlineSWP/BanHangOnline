@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCoins,
-  faLocationDot,
   faClock,
 } from "@fortawesome/free-solid-svg-icons";
 import { useParams } from "react-router-dom";
@@ -87,7 +86,7 @@ const Condition = styled.h3`
 `;
 
 const Guide = styled.h3`
-  margin-top: 30px;
+  margin-top: 40px;
   font-weight: 500;
 `;
 
@@ -108,6 +107,7 @@ const Description = (props) => {
     addToCart(id);
     setIsCodeReceived(true);
   };
+
   const [value, setValue] = React.useState(2);
   const { duration } = props.data || {};
   const startDate = duration?.startDate || new Date();
@@ -119,11 +119,13 @@ const Description = (props) => {
     startDate.getMonth() - 1,
     startDate.getDate()
   );
+
   const formattedEndDate = new Date(
     endDate.getFullYear(),
     endDate.getMonth() - 1,
     endDate.getDate()
   );
+
   return (
     <Container>
       <Wrapper>
@@ -140,13 +142,15 @@ const Description = (props) => {
             {product.guide5} <br />
           </Desc>
 
-          <div style={{ padding: 14 }} className="App">
+          <div style={{ paddingRight: 14, marginRight: 50 }} className="App">
             <Guide>Đánh giá người dùng </Guide>
+
             <Paper style={{ padding: "40px 20px" }}>
               <Grid container wrap="nowrap" spacing={2}>
                 <Grid item>
                   <Avatar alt="Remy Sharp" src={imgLink} />
                 </Grid>
+
                 <Grid justifyContent="left" item xs zeroMinWidth>
                   {/* Rating */}
                   <Rating
@@ -155,24 +159,30 @@ const Description = (props) => {
                     readOnly
                     size="small"
                   />
+
                   <h4 style={{ margin: 0, textAlign: "left" }}>
                     Michel Michel
                   </h4>
+
                   <p style={{ textAlign: "left" }}>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Aenean luctus ut est sed faucibus. Duis bibendum ac ex
                     vehicula laoreet.{" "}
                   </p>
+
                   <p style={{ textAlign: "left", color: "gray" }}>
                     posted 1 minute ago
                   </p>
                 </Grid>
               </Grid>
+
               <Divider variant="fullWidth" style={{ margin: "30px 0" }} />
+
               <Grid container wrap="nowrap" spacing={2}>
                 <Grid item>
                   <Avatar alt="Remy Sharp" src={imgLink} />
                 </Grid>
+
                 <Grid justifyContent="left" item xs zeroMinWidth>
                   {/* Rating */}
                   <Rating
@@ -181,14 +191,17 @@ const Description = (props) => {
                     readOnly
                     size="small"
                   />
+
                   <h4 style={{ margin: 0, textAlign: "left" }}>
                     Michel Michel
                   </h4>
+
                   <p style={{ textAlign: "left" }}>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Aenean luctus ut est sed faucibus. Duis bibendum ac ex
                     vehicula laoreet.{" "}
                   </p>
+
                   <p style={{ textAlign: "left", color: "gray" }}>
                     posted 1 minute ago
                   </p>
@@ -208,10 +221,12 @@ const Description = (props) => {
             {formattedStartDate.toLocaleDateString()} -{" "}
             {formattedEndDate.toLocaleDateString()} <br />
           </Desc>
+
           <Price>
             {" "}
             {product.price} <FontAwesomeIcon icon={faCoins} />
           </Price>
+
           <AddContainer>
             <Button
               className={`pro_bth ${isCodeReceived ? "code-received" : ""}`}
@@ -227,7 +242,9 @@ const Description = (props) => {
             </Button>
           </AddContainer>
           <br /> <br />
+
           <Condition> Điều kiện áp dụng </Condition>
+          
           <Desc>
             {product.condition1} <br /> <br />
             {product.condition2} <br /> <br />

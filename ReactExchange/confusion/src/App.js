@@ -4,7 +4,6 @@ import Header from './components/header/Header';
 import Login2 from './pages/login/Login2';
 import About from './pages/aboutUs/About';
 import Home from './pages/home/Home';
-import Fashion from './pages/fashion/Fashion';
 import Trending from './pages/trending/Trending';
 import Description from './pages/description/Description';
 import Footer from './components/footer/Footer';
@@ -19,7 +18,6 @@ function App() {
 
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/fashion' element={<Fashion />} />
           <Route path='/login' element={<Login2 />} />
           <Route path='/trend' element={<Trending />} />
           <Route path='/about' element={<About />} />

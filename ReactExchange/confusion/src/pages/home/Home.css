@@ -272,10 +272,11 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 100px;
     /* margin: 100px 0 100px 0; */
 }
 
-.feedback {
+/* .feedback {
     margin: 10px 100px 10px 100px;
     background-color: #fff;
     display: flex;
@@ -314,4 +315,4 @@ main {
 
 .feedback-crear {
     font-size: 17px;
-}
+} */

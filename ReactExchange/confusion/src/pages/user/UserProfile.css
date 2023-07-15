@@ -5,7 +5,7 @@ section {
 }
 
 .container {
-	margin-top: 0;
+	overflow: hidden;
 }
 
 .shadow {
