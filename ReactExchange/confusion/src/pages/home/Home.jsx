@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Home.css";
 import { PRODUCTS } from "../../products";
 import { Product } from "./product";
@@ -6,6 +6,15 @@ import Slider from "../../components/slider/Slider";
 import SliderFeedback from "../../components/slider/SliderFeedback";
 
 function Home() {
+
+  const [data, setData] = useState(PRODUCTS);
+  const filterResult = (catItem) => {
+    const result = PRODUCTS.filter((curData) => {
+      return curData.type === catItem;
+    });
+    setData(result);
+  }
+
   return (
     <main>
       {/* Promo  */}
@@ -19,21 +28,21 @@ function Home() {
           <h1 class="product-detail">Our Voucher Collection</h1>
           <ul class="nav-list">
             <li>
-              <a href="index.html" class="active">
+              <a onClick={() => setData(PRODUCTS)}>
                 Tất cả
               </a>
             </li>
             <li>
-              <a href="#">Thời trang</a>
+              <a onClick={() => filterResult('Thời trang')}>Thời trang</a>
             </li>
             <li>
-              <a href="#">Công nghệ và điện tử</a>
+              <a onClick={() => filterResult('Công nghệ và điện tử')}>Công nghệ và điện tử</a>
             </li>
             <li>
-              <a href="#">Thức ăn</a>
+              <a onClick={() => filterResult('Thức ăn')}>Thức ăn</a>
             </li>
             <li>
-              <a href="#">Làm đẹp</a>
+              <a onClick={() => filterResult('Thức uống')}>Thức uống</a>
             </li>
             <li>
               <a href="#">Du lịch</a>
@@ -44,7 +53,7 @@ function Home() {
           </ul>
 
           <div class="pro-container">
-            {PRODUCTS.map((product) => (
+            {data.map((product) => (
               <Product data={product} />
             ))}
           </div>
@@ -73,7 +82,7 @@ function Home() {
         <div class="story">
           <div class="imgStory">
             {" "}
-            <img src="assets/img/story/story.png" />{" "}
+            <img src="assets/img/story/story.png" alt="" />{" "}
           </div>
           <article class="description-all">
             <div class="description-all-detail">
@@ -96,12 +105,12 @@ function Home() {
       <div class="partner">
         <div class="partner-detail">Các đối tác của chúng tôi</div>
         <div class="partner-img">
-          <img src="assets/img/partner/bhd.png" />
-          <img src="assets/img/partner/coolmate.png" />
-          <img src="assets/img/partner/gongcha.png" />
-          <img src="assets/img/partner/hotpot.png" />
-          <img src="assets/img/partner/ticketbox.png" />
-          <img src="assets/img/partner/travelloka.png" />
+          <img src="assets/img/partner/bhd.png" alt="" />
+          <img src="assets/img/partner/coolmate.png" alt="" />
+          <img src="assets/img/partner/gongcha.png" alt="" />
+          <img src="assets/img/partner/hotpot.png" alt="" />
+          <img src="assets/img/partner/ticketbox.png" alt="" />
+          <img src="assets/img/partner/travelloka.png" alt="" />
         </div>
       </div>
 

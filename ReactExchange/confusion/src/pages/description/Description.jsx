@@ -1,11 +1,19 @@
 import React, { useContext, useState, useEffect } from "react";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCoins, faLocationDot } from "@fortawesome/free-solid-svg-icons";
+import { faCoins, faClock } from "@fortawesome/free-solid-svg-icons";
 import { useParams } from "react-router-dom";
-import { Details } from "../../details";
+// import { Details } from "../../details";
 import { ShopContext } from "../../context/shop-context";
 import { PRODUCTS } from "../../products";
+import Rating from "@mui/material/Rating";
+// import Typography from "@mui/material/Typography";
+// import PropTypes from "prop-types";
+
+import { Divider, Avatar, Grid, Paper } from "@mui/material";
+
+const imgLink =
+  "https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260";
 
 const Container = styled.div`
   margin-top: 150px;
@@ -75,11 +83,11 @@ const Condition = styled.h3`
 `;
 
 const Guide = styled.h3`
-  margin-top: 30px;
+  margin-top: 40px;
   font-weight: 500;
 `;
 
-const Description = () => {
+const Description = (props) => {
   const { addToCart, cartItems } = useContext(ShopContext);
   const [isCodeReceived, setIsCodeReceived] = useState(false);
   const { id } = useParams();
@@ -96,6 +104,25 @@ const Description = () => {
     addToCart(id);
     setIsCodeReceived(true);
   };
+
+  const [value, setValue] = React.useState(2);
+  const { duration } = props.data || {};
+  const startDate = duration?.startDate || new Date();
+  const endDate = duration?.endDate || new Date();
+
+  // Adjust the month values by subtracting 1
+  const formattedStartDate = new Date(
+    startDate.getFullYear(),
+    startDate.getMonth() - 1,
+    startDate.getDate()
+  );
+
+  const formattedEndDate = new Date(
+    endDate.getFullYear(),
+    endDate.getMonth() - 1,
+    endDate.getDate()
+  );
+
   return (
     <Container>
       <Wrapper>
@@ -112,7 +139,73 @@ const Description = () => {
             {product.guide5} <br />
           </Desc>
 
-          <Guide>Đánh giá người dùng </Guide>
+          <div style={{ paddingRight: 14, marginRight: 50 }} className="App">
+            <Guide>Đánh giá người dùng </Guide>
+
+            <Paper style={{ padding: "40px 20px" }}>
+              <Grid container wrap="nowrap" spacing={2}>
+                <Grid item>
+                  <Avatar alt="Remy Sharp" src={imgLink} />
+                </Grid>
+
+                <Grid justifyContent="left" item xs zeroMinWidth>
+                  {/* Rating */}
+                  <Rating
+                    name="read-only"
+                    value={value}
+                    readOnly
+                    size="small"
+                  />
+
+                  <h4 style={{ margin: 0, textAlign: "left" }}>
+                    Michel Michel
+                  </h4>
+
+                  <p style={{ textAlign: "left" }}>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Aenean luctus ut est sed faucibus. Duis bibendum ac ex
+                    vehicula laoreet.{" "}
+                  </p>
+
+                  <p style={{ textAlign: "left", color: "gray" }}>
+                    posted 1 minute ago
+                  </p>
+                </Grid>
+              </Grid>
+
+              <Divider variant="fullWidth" style={{ margin: "30px 0" }} />
+
+              <Grid container wrap="nowrap" spacing={2}>
+                <Grid item>
+                  <Avatar alt="Remy Sharp" src={imgLink} />
+                </Grid>
+
+                <Grid justifyContent="left" item xs zeroMinWidth>
+                  {/* Rating */}
+                  <Rating
+                    name="read-only"
+                    value={value}
+                    readOnly
+                    size="small"
+                  />
+
+                  <h4 style={{ margin: 0, textAlign: "left" }}>
+                    Michel Michel
+                  </h4>
+
+                  <p style={{ textAlign: "left" }}>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Aenean luctus ut est sed faucibus. Duis bibendum ac ex
+                    vehicula laoreet.{" "}
+                  </p>
+
+                  <p style={{ textAlign: "left", color: "gray" }}>
+                    posted 1 minute ago
+                  </p>
+                </Grid>
+              </Grid>
+            </Paper>
+          </div>
         </ImgContainer>
 
         <InfoContainer>
@@ -121,11 +214,9 @@ const Description = () => {
             {product.description1} <br /> <br />
             {product.description2} <br /> <br />
             {product.description3} <br /> <br />
-            <FontAwesomeIcon
-              icon={faLocationDot}
-              style={{ color: "#ff0000" }}
-            />{" "}
-            {product.time} <br />
+            <FontAwesomeIcon icon={faClock} style={{ color: "#f99b43" }} />{" "}
+            {formattedStartDate.toLocaleDateString()} -{" "}
+            {formattedEndDate.toLocaleDateString()} <br />
           </Desc>
           <Price>
             {" "}
