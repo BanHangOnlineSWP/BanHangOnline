@@ -18,11 +18,21 @@
 
 <!-- Lien kết css  -->
 <link rel="stylesheet" href="index/style.css">
+<link rel="stylesheet" href="index/stylescss.scss">
+<!-- <link rel="stylesheet" href="index/header.css"> -->
+
 <script src="index/script.js"></script>
+
+<!-- Thêm link cho progess bar -->
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<!-- Link boostrap -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
 <body>
     <!-- header  -->
-    <section class="header-all">
+    <section class="header-all" style=" overflow: visible;">
 
         <!-- Logo -->
         <div class="header">
@@ -41,7 +51,7 @@
             </div>
         </div>
 
-        <div id="header1">
+        <div id="header1" style=" overflow: visible;">
             <ul id="navbar1">
                 <li><a href="index.html" class="active">Trang chủ</a></li>
                 <li><a href="trend.html">Xu hướng</a></li>
@@ -55,20 +65,33 @@
             </ul>
 
             <!-- Search bar -->
-            <div class="navbar-search">
-                <form class="navbar-search-container">
-                    <input id="search-text" type="text" placeholder="Tìm kiếm">
-                    <button id="search-btn">
-                        <img src="index/img/header/Search.png">
-                    </button>
-
-                </form>
-            </div>
-            <div>
-                <ul id="navbar2">
-                    <li class="lap"><a href="cart.html"><i class="fa fa-regular fa-tag"></i></a></li>
-                    <li id="mobile"><a href="cart.html"><i class="fa fa-regular fa-tag"></i></a></li>
-                    <li class="lap"><a href="inforUser.html"><i class="fa fa-regular fa-user"></i></a></li>
+            <form class="navbar-form navbar-left" action="/action_page.php">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search" name="search">
+                    <div class="input-group-btn">
+                        <button class="btn btn-default" type="submit">
+                            <i class="glyphicon glyphicon-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+            <div style=" overflow: visible;">
+                <ul id="navbar2" style=" overflow: visible;">
+                    <li class="lap"><a href="cart.html"><i class="fa fa-regular fa-tag"></i> <span class="badge"
+                                style="position: absolute;bottom: 1px;background: orangered; ">3</span></a></li>
+                    <!-- <li id="mobile"><a href="cart.html"><i class="fa fa-regular fa-tag"></i></a></li> -->
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" type="button" data-toggle="dropdown" href="#">
+                            <i class="fa fa-regular fa-user"></i>
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Tài khoản của tôi</a></li>
+                            <li><a href="#">Đổi mật khẩu</a></li>
+                            <li><a href="#">Ví xu</a></li>
+                        </ul>
+                    </li>
+                    <!-- <li class="lap"><a href="inforUser.html"><i class="fa fa-regular fa-user"></i></a></li> -->
                     <li class="lap"><a href="notification.html"><i class="fa fa-regular fa-bell"></i></a></li>
                 </ul>
             </div>
@@ -83,7 +106,7 @@
     </section>
 
     <!-- Promo  -->
-    <section class="promo-all">
+    <!-- <section class="promo-all">
         <div id="promo">
             <img class="imgpromo imgP" src="index/img/promo/promo1.png">
             <img class="imgpromo imgP" src="index/img/promo/promo2.png">
@@ -98,7 +121,53 @@
             <p class="image-badge" onclick="currentDiv(2)"></p>
             <p class="image-badge" onclick="currentDiv(3)"></p>
         </div>
+    </section> -->
+    <section class="promo-all">
+        <div class="container ">
+
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner ">
+
+                    <div class="item active ">
+                        <img src="index/img/promo/promo1.png" alt="Los Angeles" style="width:100%;">
+
+                    </div>
+
+                    <div class="item">
+                        <img src="index/img/promo/promo2.png" alt="Chicago" style="width:100%;">
+
+                    </div>
+
+                    <div class="item">
+                        <img src="index/img/promo/promo3.png" alt="New York" style="width:100%;">
+
+                    </div>
+
+                </div>
+
+                <!-- Left and right controls -->
+                <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
     </section>
+
+
+
 
 
     <!-- Product -->
@@ -126,10 +195,23 @@
                         style="background-image: url(https://statics.vincom.com.vn/uu-dai/Highlands-coffee.jpg);">
                     </div>
                     <div class="des">
-                        <p>Thức ăn</p>
-                        <h4>Mua 2 tính tiền 1 tại Highlands-coffee</h4>
-                        <a class="pro_active" href="#"><i class="fa-solid fa-circle-arrow-right"></i></a>
+                        <p>{type}</p>
+                        <p>
+                            <i class="fa-solid fa-clock" style="font-size:17px; color:  orange;"></i>
+                            {start-date}-{end-date}
+                        </p>
+
+
+                        <a href="#" style="text-decoration: none;">
+                            <h4>Mua 2 tính tiền 1 tại Highlands-coffee</h4>
+                        </a>
+                        <div class="progess">
+
+                            <div class="w3-container w3-red w3-center " style="width:20%; "><i
+                                    class="fa-solid fa-fire"></i></div>
+                        </div>
                     </div>
+
                 </div>
                 <!-- SP2  -->
                 <div class="pro">
@@ -268,18 +350,31 @@
         <div class="wrapper">
             <!-- <i id="left" class="fa-solid fa-angle-left"></i> -->
             <ul class="scrollbar">
-            
+
                 <!-- SP1  -->
-                <li class="scrollbar-item">
+                <div class="pro">
                     <div class="pro_img"
                         style="background-image: url(https://statics.vincom.com.vn/uu-dai/Highlands-coffee.jpg);">
                     </div>
                     <div class="des">
-                        <p>Thức ăn</p>
-                        <h4>Mua 2 tính tiền 1 tại Highlands-coffee</h4>
-                        <a class="pro_active" href="#"><i class="fa-solid fa-circle-arrow-right"></i></a>
+                        <p>{type}</p>
+                        <p>
+                            <i class="fa-solid fa-clock" style="font-size:17px; color:  orange;"></i>
+                            {start-date}-{end-date}
+                        </p>
+
+
+                        <a href="#" style="text-decoration: none;">
+                            <h4>Mua 2 tính tiền 1 tại Highlands-coffee</h4>
+                        </a>
+                        <div class="progess">
+
+                            <div class="w3-container w3-red w3-center " style="width:20%; "><i
+                                    class="fa-solid fa-fire"></i></div>
+                        </div>
                     </div>
-                </li>
+
+                </div>
                 <!-- SP2  -->
                 <li class="scrollbar-item">
                     <div class="pro_img" style="background-image: url(https://cdn-www.vinid.net/91e68594-samsung.jpg);">
@@ -334,8 +429,8 @@
                         <a class="pro_active" href="#"><i class="fa-solid fa-circle-arrow-right"></i></a>
                     </div>
                 </li>
-                 <!-- SP7  -->
-                 <li class="scrollbar-item">
+                <!-- SP7  -->
+                <li class="scrollbar-item">
                     <div class="pro_img"
                         style="background-image: url(data:image/jpeg;base64,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);">
                     </div>
@@ -356,11 +451,11 @@
                         <a class="pro_active" href="#"><i class="fa-solid fa-circle-arrow-right"></i></a>
                     </div>
                 </li>
-            </ul>  
+            </ul>
             <!-- <i id="right" class="fa-solid fa-angle-right"></i>   -->
         </div>
 
-    
+
 
     </section>
 
@@ -392,21 +487,85 @@
     </section>
 
     <!-- FeedBack -->
-    <section class="feedback-all">
-        <div class="feedback">
-            <img src="index/img/feedback/feedback1.png">
-            <article class="feedback-description">
-                <div class="feedback-detail"> Đánh giá của sinh viên</div>
-                <div class="feedback-desc">I am very happy with the services provided, it is very helpful, starting
-                    from the insight that the company gave from the start that I did not
-                    understand what it was so I got knowledge and made my website
-                    look better</div>
-                <div class="feedback-name">Anna Saraspova</div>
-                <div class="feedback-crear">Sinh viên đại học FPT</div>
-            </article>
-        </div>
-    </section>
 
+
+    <div class="feedback-all">
+
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+
+                <div class="item active">
+                    <div class="feedback">
+                        <img src="index/img/feedback/Phuong.jpg">
+                        <article class="feedback-description">
+                            <div class="feedback-detail"> Đánh giá của sinh viên</div>
+                            <div class="feedback-desc">I am very happy with the services provided, it is very helpful,
+                                starting
+                                from the insight that the company gave from the start that I did not
+                                understand what it was so I got knowledge and made my website
+                                look better</div>
+                            <div class="feedback-name">Anna Saraspova</div>
+                            <div class="feedback-crear">Sinh viên đại học FPT</div>
+                        </article>
+                    </div>
+
+                </div>
+
+                <div class="item">
+                    <div class="feedback">
+                        <img src="index/img/feedback/Khoi.jpg">
+                        <article class="feedback-description">
+                            <div class="feedback-detail"> Đánh giá của sinh viên</div>
+                            <div class="feedback-desc">I am very happy with the services provided, it is very helpful,
+                                starting
+                                from the insight that the company gave from the start that I did not
+                                understand what it was so I got knowledge and made my website
+                                look better</div>
+                            <div class="feedback-name">Anna Saraspova</div>
+                            <div class="feedback-crear">Sinh viên đại học FPT</div>
+                        </article>
+                    </div>
+
+                </div>
+
+                <div class="item">
+                    <div class="feedback">
+                        <img src="index/img/feedback/Khiem.jpg">
+                        <article class="feedback-description">
+                            <div class="feedback-detail"> Đánh giá của sinh viên</div>
+                            <div class="feedback-desc">I am very happy with the services provided, it is very helpful,
+                                starting
+                                from the insight that the company gave from the start that I did not
+                                understand what it was so I got knowledge and made my website
+                                look better</div>
+                            <div class="feedback-name">Anna Saraspova</div>
+                            <div class="feedback-crear">Sinh viên đại học FPT</div>
+                        </article>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
     <!-- Footer  -->
     <footer>
         <div class="footer">
