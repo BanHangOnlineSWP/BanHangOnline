@@ -212,6 +212,12 @@ body {
     ;
 }
 
+.info-icons {
+    display: flex;
+}
+
+
+
 /* PROMO */
 .promo-all {
 
