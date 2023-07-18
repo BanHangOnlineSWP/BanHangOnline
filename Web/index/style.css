@@ -744,8 +744,6 @@ footer a:hover {
     color: rgb(245, 125, 13);
 }
 
-
-
 /* Star Media Query */
 @media (max-width:799px) {
 
@@ -789,7 +787,11 @@ footer a:hover {
 
     }
 
-    /* Bell */
+    #xu {
+        color: #cf913f;
+    }
+
+
 
 
 
