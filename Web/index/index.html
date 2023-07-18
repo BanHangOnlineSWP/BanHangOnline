@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../img/logo/logo1.png" type="img/logo/x-icon">
+    <title>Trang chủ - Student Deal</title>
+</head>
+<!-- font google: roboto - regular -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+<!-- icon  -->
+<script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+<!-- Lien kết css  -->
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="stylescss.scss">
+<!-- <link rel="stylesheet" href="header.css"> -->
+
+<script src="script.js"></script>
+
+<!-- Thêm link cho progess bar -->
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<!-- Link boostrap -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<body>
+    <!-- header  -->
+    <section class="header-all" style=" overflow: visible;">
+
+        <!-- Logo -->
+        <div class="header">
+            <div id="header">
+                <a class="logo" href="index.html">
+                    <img src="../img/logo/logo2.png" class="logo-img" alt="">
+                    <p>STUDENT DEAL</p>
+                </a>
+                <div>
+                    <ul id="navbar">
+                        <li><a href="aboutus.html">Về Chúng Tôi</a></li>
+                        <li><a href="login.html"><button id="button">Đăng nhập</button></a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="header1" style=" overflow: visible;">
+            <ul id="navbar1">
+                <li><a href="index.html" class="active">Trang chủ</a></li>
+                <li><a href="trend.html">Xu hướng</a></li>
+                <li><a href="all.html">Tất cả voucher</a></li>
+                <li><a href="blog.html">Blog&News</a></li>
+                <li><a href="promo.html">Quảng cáo</a></li>
+                <li class="bar"><a href="cart.html"><i class="fa fa-regular fa-tag"></i> Voucher của tôi</a></li>
+                <li class="bar"><a href="inforUser.html"><i class="fa fa-regular fa-user"> </i> Thông tin của tôi</a>
+                </li>
+                <li class="bar"><a href="notification.html"><i class="fa fa-regular fa-bell"></i> Thông báo</a></li>
+            </ul>
+
+            <!-- Search bar -->
+            <form class="navbar-form navbar-left" action="/action_page.php">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search" name="search">
+                    <div class="input-group-btn">
+                        <button class="btn btn-default" type="submit">
+                            <i class="glyphicon glyphicon-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+            <div style=" overflow: visible;">
+                <ul id="navbar2" style=" overflow: visible;">
+                    <li class="lap"><a href="cart.html"><i class="fa fa-regular fa-tag"></i> <span class="badge"
+                                style="position: absolute;bottom: 1px;background: orangered; ">3</span></a></li>
+                    <!-- <li id="mobile"><a href="cart.html"><i class="fa fa-regular fa-tag"></i></a></li> -->
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" type="button" data-toggle="dropdown" href="#">
+                            <i class="fa fa-regular fa-user"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../userProfile/userInfor.html">Tài khoản của tôi</a></li>
+                            <li><a href="#">Đổi mật khẩu</a></li>
+                            <li><a href="#">Ví xu</a></li>
+                        </ul>
+                    </li>
+                    <!-- <li class="lap"><a href="inforUser.html"><i class="fa fa-regular fa-user"></i></a></li> -->
+                    <li class="lap"><a href="notification.html"><i class="fa fa-regular fa-bell"></i></a></li>
+                </ul>
+            </div>
+
+            <div class="mobile">
+                <i class="fas fa-outdent"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Promo  -->
+    <!-- <section class="promo-all">
+        <div id="promo">
+            <img class="imgpromo imgP" src="img/promo/promo1.png">
+            <img class="imgpromo imgP" src="img/promo/promo2.png">
+            <img class="imgpromo imgP" src="img/promo/promo3.png">
+
+            <button class="image-button button-left" onclick="plusDivs(-1)">&#10094;</button>
+            <button class="image-button button-right" onclick="plusDivs(1)">&#10095;</button>
+        </div>
+
+        <div class="badge" style="width:100%">
+            <p class="image-badge" onclick="currentDiv(1)"></p>
+            <p class="image-badge" onclick="currentDiv(2)"></p>
+            <p class="image-badge" onclick="currentDiv(3)"></p>
+        </div>
+    </section> -->
+    <section class="promo-all">
+        <div class="container ">
+
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner ">
+
+                    <div class="item active ">
+                        <img src="../img/promo/promo1.png" alt="Los Angeles" style="width:100%">
+
+                    </div>
+
+                    <div class="item">
+                        <img src="../img/promo/promo2.png" alt="Chicago" style="width:100%;">
+
+                    </div>
+
+                    <div class="item">
+                        <img src="../img/promo/promo3.png" alt="New York" style="width:100%;">
+
+                    </div>
+
+                </div>
+
+                <!-- Left and right controls -->
+                <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- Product -->
+    <section id="product-all">
+        <div class="product">
+            <!-- Detail -->
+            <h1 class="product-detail">Our Voucher Collection</h1>
+
+            <!-- Navbar -->
+            <ul class="nav-list">
+                <li><a href="index.html" class="active">Tất cả</a></li>
+                <li><a href="#">Thời trang</a></li>
+                <li><a href="#">Công nghệ và điện tử</a></li>
+                <li><a href="#">Thức ăn</a></li>
+                <li><a href="#">Làm đẹp</a></li>
+                <li><a href="#">Du lịch</a></li>
+                <li><a href="#">Khác</a></li>
+            </ul>
+
+            <!-- Container -->
+            <div class="pro-container">
+                <!-- SP1  -->
+                <div class="pro">
+                    <div class="pro_img" style="background-image: url(../img/product/Highlands-coffee.jpg);"></div>
+
+                    <div class="des">
+                        <p>{type}</p>
+                        <p>
+                            <i class="fa-solid fa-clock" style="font-size:17px; color:  orange;"></i>
+                            {start-date}-{end-date}
+                        </p>
+
+
+                        <a href="#" style="text-decoration: none;">
+                            <h4>Mua 2 tính tiền 1 tại Highlands-coffee</h4>
+                        </a>
+                        <div class="progess">
+
+                            <div class="w3-container w3-red w3-center " style="width:20%; "><i
+                                    class="fa-solid fa-fire"></i></div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- SP2  -->
+                <div class="pro">
+                    <div class="pro_img" style="background-image: url(../img/product/galaxys23.jpg);"></div>
+
+                    <div class="des">
+                        <p>Công nghệ và điện tử</p>
+                        <h4>Giảm ngay 2,000,000đ Samsung Galaxy S23 Series</h4>
+                        <a class="pro_active" href="#"><i class="fa-solid fa-circle-arrow-right"></i></a>
+                    </div>
+                </div>
+                <!-- SP3  -->
+                <div class="pro">
+                    <div class="pro_img" style="background-image: url(../img/product/am-thuc-phap-5_1642581433.jpg);">
+                    </div>
+
+                    <div class="des">
+                        <p>Food&Drink</p>
+                        <h4>Nhà hàng ruby giảm 20% set valentine’s special menu</h4>
+                        <a class="pro_active" href="#"><i class="fa-solid fa-circle-arrow-right"></i></a>
+                    </div>
+                </div>
+                <!-- SP4  -->
+                <div class="pro">
+                    <div class="pro_img" style="background-image: url(../img/product/PhucLong.png);"></div>
+
+                    <div class="des">
+                        <p>thức ăn</p>
+                        <h4>giảm 20,000đ đồ uống phúc long siêu chất</h4>
+                        <a class="pro_active" href="#"><i class="fa-solid fa-circle-arrow-right"></i></a>
+                    </div>
+                </div>
+                <!-- SP5  -->
+                <div class="pro">
+                    <div class="pro_img" style="background-image: url(../img/product/ma-giam-gia-nike.jpg);"></div>
+
+                    <div class="des">
+                        <p>thời trang</p>
+                        <h4>nike giảm thêm 110k trên giá đã giảm</h4>
+                        <a class="pro_active" href="#"><i class="fa-solid fa-circle-arrow-right"></i></a>
+                    </div>
+                </div>
+                <!-- SP6  -->
+                <div class="pro">
+                    <div class="pro_img" style="background-image: url(../img/product/galaxys23.jpg);"></div>
+
+                    <div class="des">
+                        <p>Thời trang</p>
+                        <h4>coolmate giảm 100k cho đơn hàng từ 550k</h4>
+                        <a class="pro_active" href="#"><i class="fa-solid fa-circle-arrow-right"></i></a>
+                    </div>
+                </div>
+                <!-- SP7  -->
+                <div class="pro">
+                    <div class="pro_img" style="background-image: url(../img/product/gong-cha.jpg);"></div>
+
+                    <div class="des">
+                        <p>thức ăn</p>
+                        <h4>giảm 20,000đ đồ uống phúc long siêu chất</h4>
+                        <a class="pro_active" href="#"><i class="fa-solid fa-circle-arrow-right"></i></a>
+                    </div>
+                </div>
+                <!-- SP8  -->
+                <div class="pro">
+                    <div class="pro_img" style="background-image: url(../img/product/gogi-house.jpg);"></div>
+
+                    <div class="des">
+                        <p>Food&Drink</p>
+                        <h4>Nhà hàng ruby giảm 20% set valentine’s special menu</h4>
+                        <a class="pro_active" href="#"><i class="fa-solid fa-circle-arrow-right"></i></a>
+                    </div>
+                </div>
+                <!-- SP1  -->
+                <div class="pro">
+                    <div class="pro_img" style="background-image: url(../img/product/Highlands-coffee.jpg);"></div>
+
+                    <div class="des">
+                        <p>Thức ăn</p>
+                        <h4>Mua 2 tính tiền 1 tại Highlands-coffee</h4>
+                        <a class="pro_active" href="#"><i class="fa-solid fa-circle-arrow-right"></i></a>
+                    </div>
+                </div>
+                <!-- SP2  -->
+                <div class="pro">
+                    <div class="pro_img" style="background-image: url(../img/product/asus.jpg);"></div>
+
+                    <div class="des">
+                        <p>Công nghệ và điện tử</p>
+                        <h4>Giảm ngay 2,000,000đ Samsung Galaxy S23 Series</h4>
+                        <a class="pro_active" href="#"><i class="fa-solid fa-circle-arrow-right"></i></a>
+                    </div>
+                </div>
+                <!-- SP3  -->
+                <div class="pro">
+                    <div class="pro_img" style="background-image: url(../img/product/kichi.png);"></div>
+
+                    <div class="des">
+                        <p>Food&Drink</p>
+                        <h4>Nhà hàng ruby giảm 20% set valentine’s special menu</h4>
+                        <a class="pro_active" href="#">
+                            <i class="pro-bth fa-solid fa-circle-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- SP4  -->
+                <div class="pro">
+                    <div class="pro_img" style="background-image: url(../img/product/PhucLong.png);"></div>
+
+                    <div class="des">
+                        <p>thức ăn</p>
+                        <h4>giảm 20,000đ đồ uống phúc long siêu chất</h4>
+                        <a class="pro_active" href="#">
+                            <i class="fa-solid fa-circle-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="pro-more"><button id="product-more">Find out More</button></a>
+    </section>
+
+    <!-- Top product - scrollbar  -->
+    <section class="scrollbar-all">
+        <div>
+            <!-- Detail -->
+            <h1 class="product-detail">Top Voucher</h1>
+        </div>
+        <div class="wrapper">
+            <!-- <i id="left" class="fa-solid fa-angle-left"></i> -->
+            <ul class="scrollbar">
+
+                <!-- SP1  -->
+                <div class="pro">
+                    <div class="pro_img" style="background-image: url(../img/product/Highlands-coffee.jpg);">
+                    </div>
+                    <div class="des">
+                        <p>{type}</p>
+                        <p>
+                            <i class="fa-solid fa-clock" style="font-size:17px; color:  orange;"></i>
+                            {start-date}-{end-date}
+                        </p>
+
+
+                        <a href="#" style="text-decoration: none;">
+                            <h4>Mua 2 tính tiền 1 tại Highlands-coffee</h4>
+                        </a>
+                        <div class="progess">
+
+                            <div class="w3-container w3-red w3-center " style="width:20%; "><i
+                                    class="fa-solid fa-fire"></i></div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- SP2  -->
+                <li class="scrollbar-item">
+                    <div class="pro_img" style="background-image: url(../img/product/galaxys23.jpg);">
+                    </div>
+                    <div class="des">
+                        <p>Công nghệ và điện tử</p>
+                        <h4>Giảm ngay 2,000,000đ Samsung Galaxy S23 Series</h4>
+                        <a class="pro_active" href="#"><i class="fa-solid fa-circle-arrow-right"></i></a>
+                    </div>
+                </li>
+                <!-- SP3  -->
+                <li class="scrollbar-item">
+                    <div class="pro_img" style="background-image: url(../img/product/am-thuc-phap-5_1642581433.jpg);"></div>
+                
+                    <div class="des">
+                        <p>Food&Drink</p>
+                        <h4>Nhà hàng ruby giảm 20% set valentine’s special menu</h4>
+                        <a class="pro_active" href="#"><i class="fa-solid fa-circle-arrow-right"></i></a>
+                    </div>
+                </li>
+                <!-- SP4  -->
+                <li class="scrollbar-item">
+                    <div class="pro_img" style="background-image: url(../img/product/PhucLong.png);"></div>
+
+                    <div class="des">
+                        <p>thức ăn</p>
+                        <h4>giảm 20,000đ đồ uống phúc long siêu chất</h4>
+                        <a class="pro_active" href="#"><i class="fa-solid fa-circle-arrow-right"></i></a>
+                    </div>
+                </li>
+                <!-- SP5  -->
+                <li class="scrollbar-item">
+                    <div class="pro_img" style="background-image: url(../img/product/ma-giam-gia-nike.jpg);"></div>
+                  
+                    <div class="des">
+                        <p>thức ăn</p>
+                        <h4>nike giảm thêm 110k trên giá đã giảm</h4>
+                        <a class="pro_active" href="#"><i class="fa-solid fa-circle-arrow-right"></i></a>
+                    </div>
+                </li>
+                <!-- SP6  -->
+                <li class="scrollbar-item">
+                    <div class="pro_img" style="background-image: url(../img/product/coolmate-shark-tank-9.jpg);"></div>
+                
+                    <div class="des">
+                        <p>Thời trang</p>
+                        <h4>coolmate giảm 100k cho đơn hàng từ 550k</h4>
+                        <a class="pro_active" href="#"><i class="fa-solid fa-circle-arrow-right"></i></a>
+                    </div>
+                </li>
+                <!-- SP7  -->
+                <li class="scrollbar-item">
+                    <div class="pro_img" style="background-image: url(../img/product/gong-cha.jpg);"></div>
+                    
+                    <div class="des">
+                        <p>thức ăn</p>
+                        <h4>giảm 20,000đ đồ uống phúc long siêu chất</h4>
+                        <a class="pro_active" href="#"><i class="fa-solid fa-circle-arrow-right"></i></a>
+                    </div>
+                </li>
+                <!-- SP8  -->
+                <li class="scrollbar-item">
+                    <div class="pro_img" style="background-image: url(../img/product/gogi-house.jpg);"></div>
+                   
+                    <div class="des">
+                        <p>Food&Drink</p>
+                        <h4>Nhà hàng ruby giảm 20% set valentine’s special menu</h4>
+                        <a class="pro_active" href="#"><i class="fa-solid fa-circle-arrow-right"></i></a>
+                    </div>
+                </li>
+            </ul>
+            <!-- <i id="right" class="fa-solid fa-angle-right"></i>   -->
+        </div>
+
+
+
+    </section>
+
+    <!-- Story about Student Deal  -->
+    <section class="story-all">
+        <div class="story">
+            <div class="imgStory"><img src="../img/story/story.png"></div>
+            <article class="description-all">
+                <div class="description-all-detail">Câu chuyện về </br>Student Deal</div>
+                <div class="description">Student Deal là nơi cung cấp các khoản giảm giá đặc biệt dành cho sinh viên.
+                    Chúng tôi có nhiều loại voucher và ưu đãi cho các mặt hàng và dịch vụ khác nhau, từ điện thoại di
+                    động đến thực phẩm. Với Student Deal, bạn có thể tiết kiệm tiền một cách đơn giản và dễ dàng. Tìm
+                    kiếm các ưu đãi của chúng tôi để giúp cuộc sống sinh viên của bạn trở nên dễ dàng hơn.</div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Partners -->
+    <section class="partner">
+        <div class="partner-detail">Các đối tác của chúng tôi</div>
+        <div class="partner-img">
+            <img src="../img/partner/bhd.png">
+            <img src="../img/partner/coolmate.png">
+            <img src="../img/partner/gongcha.png">
+            <img src="../img/partner/hotpot.png">
+            <img src="../img/partner/ticketbox.png">
+            <img src="../img/partner/travelloka.png">
+        </div>
+    </section>
+
+    <!-- FeedBack -->
+
+
+    <div class="feedback-all">
+
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+
+                <div class="item active">
+                    <div class="feedback">
+                        <img src="../img/feedback/Phuong.jpg">
+                        <article class="feedback-description">
+                            <div class="feedback-detail"> Đánh giá của sinh viên</div>
+                            <div class="feedback-desc">I am very happy with the services provided, it is very helpful,
+                                starting
+                                from the insight that the company gave from the start that I did not
+                                understand what it was so I got knowledge and made my website
+                                look better</div>
+                            <div class="feedback-name">Anna Saraspova</div>
+                            <div class="feedback-crear">Sinh viên đại học FPT</div>
+                        </article>
+                    </div>
+
+                </div>
+
+                <div class="item">
+                    <div class="feedback">
+                        <img src="../img/feedback/Khoi.jpg">
+                        <article class="feedback-description">
+                            <div class="feedback-detail"> Đánh giá của sinh viên</div>
+                            <div class="feedback-desc">I am very happy with the services provided, it is very helpful,
+                                starting
+                                from the insight that the company gave from the start that I did not
+                                understand what it was so I got knowledge and made my website
+                                look better</div>
+                            <div class="feedback-name">Anna Saraspova</div>
+                            <div class="feedback-crear">Sinh viên đại học FPT</div>
+                        </article>
+                    </div>
+
+                </div>
+
+                <div class="item">
+                    <div class="feedback">
+                        <img src="../img/feedback/Khiem.jpg">
+                        <article class="feedback-description">
+                            <div class="feedback-detail"> Đánh giá của sinh viên</div>
+                            <div class="feedback-desc">I am very happy with the services provided, it is very helpful,
+                                starting
+                                from the insight that the company gave from the start that I did not
+                                understand what it was so I got knowledge and made my website
+                                look better</div>
+                            <div class="feedback-name">Anna Saraspova</div>
+                            <div class="feedback-crear">Sinh viên đại học FPT</div>
+                        </article>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+    <!-- Footer  -->
+    <footer>
+        <div class="footer">
+            <div class="col">
+                <img class="footer-logo" src="../img/logo/logo2.png" alt="">
+                <h4>Liên hệ chúng tôi</h4>
+                <p><strong>Số điện thoại:</strong> 028 7300 5588 </p>
+                <p><strong>Địa chỉ:</strong> Lô E2a-7, Đường D1, Đ. D1, Long Thạnh Mỹ,
+                    </br> Thành Phố Thủ Đức, Thành phố Hồ Chí Minh 700000</p>
+                <p><strong>Thời gian:</strong> 8AM - 5PM </p>
+                <div class="follow">
+                    <h4>Theo dõi chúng tôi qua</h4>
+                    <div class="icon">
+                        <a href="#"><i class="fa fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa fab fa-instagram"></i></a>
+                        <a href="#"><i class="fa fab fa-youtube"></i></a>
+                        <a href="#"><i class="fa fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <h4>Về Student Deal</h4>
+                <a href="#">Giới thiệu về Student Deal</a>
+                <a href="#">Các nhà cung cấp</a>
+                <a href="#">Liên hệ truyền thông</a>
+                <a href="#">Liên hệ liên kết</a>
+            </div>
+
+            <div class="col">
+                <h4>Tài khoản của tôi</h4>
+                <a href="#">Đăng Nhập</a>
+                <a href="#">Voucher của tôi</a>
+                <a href="#">Thông tin tài khoản</a>
+                <a href="#">Trợ giúp</a>
+            </div>
+
+            <div class="col install">
+                <h4>Tải ứng dụng Student Deal</h4>
+                <div class="app">
+                    <img src="../img/QR/app.png">
+                    <div class="app-kind">
+                        <h5><i class="fa-brands fa-apple"></i> App Store</h5>
+                        <h5><i class="fa-brands fa-google-play"></i> Google Play</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
