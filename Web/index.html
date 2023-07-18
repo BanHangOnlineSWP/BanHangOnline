@@ -18,7 +18,7 @@
 
 <!-- Lien kết css  -->
 <link rel="stylesheet" href="index/style.css">
-<link rel="stylesheet" href="index/stylescss.scss">
+<!-- <link rel="stylesheet" href="index/stylescss.scss"> -->
 <!-- <link rel="stylesheet" href="index/header.css"> -->
 
 <script src="index/script.js"></script>
@@ -29,6 +29,17 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<!-- Dropdown bell -->
+<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $(".notification_icon .fa-bell").click(function () {
+            $(".dropdown").toggleClass("active");
+        })
+    });
+</script>
 
 <body>
     <!-- header  -->
@@ -61,7 +72,18 @@
                 <li class="bar"><a href="cart.html"><i class="fa fa-regular fa-tag"></i> Voucher của tôi</a></li>
                 <li class="bar"><a href="inforUser.html"><i class="fa fa-regular fa-user"> </i> Thông tin của tôi</a>
                 </li>
-                <li class="bar"><a href="notification.html"><i class="fa fa-regular fa-bell"></i> Thông báo</a></li>
+                <!-- <li class="bar">
+                    <div class="dropdown">
+                        <a class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"><i
+                                class="fa fa-regular fa-bell"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">HTML</a></li>
+                            <li><a href="#">CSS</a></li>
+                            <li><a href="#">JavaScript</a></li>
+                        </ul>
+                    </div>
+
+                </li> -->
             </ul>
 
             <!-- Search bar -->
@@ -86,13 +108,44 @@
                             <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Tài khoản của tôi</a></li>
+                            <li><a href="userProfile/userInfor.html">Tài khoản của tôi</a></li>
                             <li><a href="#">Đổi mật khẩu</a></li>
-                            <li><a href="#">Ví xu</a></li>
+                            <li><a href="ViVaCart/viVoucher.html">Ví voucher</a></li>
                         </ul>
                     </li>
                     <!-- <li class="lap"><a href="inforUser.html"><i class="fa fa-regular fa-user"></i></a></li> -->
-                    <li class="lap"><a href="notification.html"><i class="fa fa-regular fa-bell"></i></a></li>
+                    <style>
+                        /* Custom CSS for the dropdown menu */
+                        .custom-dropdown-menu {
+                            min-width: 300px;
+                            /* Set your desired width here */
+                        }
+                    </style>
+
+                    <!-- Your HTML code with the modified class name -->
+                    <li style="overflow: visible;">
+                        <a class="dropdown-toggle" type="button" data-toggle="dropdown" href="#">
+                            <i class="fa-solid fa-bell"></i>
+                        </a>
+                        <ul class="dropdown-menu pull-right custom-dropdown-menu">
+                            <!-- Added the custom-dropdown-menu class -->
+                            <li>
+                                <p>18:20 19/07/2023</p>
+                                <p>Bạn Đã sử dụng voucher Mua 2 tính tiền 1 tại Highlands-coffee. Hãy đánh giá để nhận
+                                    thêm xu nhé!</p>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <p>18:20 19/07/2023</p>
+                                <p>Bạn có thêm 20 xu vì đã sử dụng voucher!</p>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <p>18:20 19/07/2023</p>
+                                <p>Voucher Mua 2 tính tiền 1 tại Highlands-coffee sắp hết hạn!</p>
+                            </li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
 

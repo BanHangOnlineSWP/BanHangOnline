@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Ví Voucher</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="viVoucher.css">
+    <link rel="stylesheet" href="../index/style.css">
+
+    <!-- icon  -->
+    <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+
+
+</head>
+
+<body>
+
+    <div class="tab-cart">
+        <h1>Ví Voucher</h1>
+        <ul class="nav nav-tabs">
+            <li class="active"><a href="#home">Voucher của tôi</a></li>
+            <li><a href="#menu1">Voucher đã sử dụng</a></li>
+            <li><a href="#menu2">Voucher đã hết hạn</a></li>
+        </ul>
+
+        <div class="tab-content">
+            <div id="home" class="tab-pane fade in active ">
+                <div class="cart">
+                    <div id="cart-items">
+                        <div id="cartItem" key={product.id}>
+                            <div id="cart-img">
+                                <img src="../img/partner/bhd.png" alt="Product" />
+                            </div>
+                            <div id="cart-des">
+                                <p id="cart-detail">Mua 2 tính tiền 1 tại Highlands-coffee</p>
+                                <p id="cart-date">
+                                    Date: {start-date}-{end-date}
+                                </p>
+                                <div id="cart-xu">
+                                    <p> <i class="fa-solid fa-coins"></i> <strong>20</strong></p>
+                                    <ul id="cart-bth">
+                                        <button>
+                                            <i class="fa-solid fa-trash"></i>
+                                        </button>
+                                        <button>
+                                            SỬ DỤNG NGAY
+                                        </button>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="cartItem" key={product.id}>
+                            <div id="cart-img">
+                                <img src="../img/partner/bhd.png" alt="Product" />
+                            </div>
+                            <div id="cart-des">
+                                <p id="cart-detail">Mua 2 tính tiền 1 tại Highlands-coffee</p>
+                                <p id="cart-date">
+                                    Date: {start-date}-{end-date}
+                                </p>
+                                <div id="cart-xu">
+                                    <p> <i class="fa-solid fa-coins"></i> <strong>25</strong></p>
+                                    <ul id="cart-bth">
+                                        <button>
+                                            <i class="fa-solid fa-trash"></i>
+                                        </button>
+                                        <button>
+                                            SỬ DỤNG NGAY
+                                        </button>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+            <div id="menu1" class="tab-pane fade">
+                <div class="cart">
+                    <div id="cart-items">
+                        <div id="cartItem" key={product.id}>
+                            <div id="cart-img">
+                                <img src="../img/partner/bhd.png" alt="Product" />
+                            </div>
+                            <div id="cart-des">
+                                <p id="cart-detail">Mua 2 tính tiền 1 tại Highlands-coffee</p>
+                                <p id="cart-date">
+                                    Date: {start-date}-{end-date}
+                                </p>
+                                <ul id="cart-bth-used">
+                                    <button>
+                                        ĐÃ SỬ DỤNG
+                                    </button>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+            <div id="menu2" class="tab-pane fade">
+                <div class="cart">
+                    <div id="cart-items">
+                        <div id="cartItem" key={product.id}>
+                            <div id="cart-img">
+                                <img src="../img/partner/bhd.png" alt="Product" />
+                            </div>
+                            <div id="cart-des">
+                                <p id="cart-detail">Mua 2 tính tiền 1 tại Highlands-coffee</p>
+                                <p id="cart-date">
+                                    Date: {start-date}-{end-date}
+                                </p>
+                                <ul id="cart-bth-used">
+                                    <button>
+                                        ĐÃ HẾT HẠN
+                                    </button>
+                                </ul>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $(".nav-tabs a").click(function () {
+                $(this).tab('show');
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>
