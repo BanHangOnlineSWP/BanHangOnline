@@ -183,6 +183,7 @@ body {
 
 
 
+
 #navbar1 li a:hover,
 #navbar li a:hover,
 #navbar2 li a:hover,
@@ -212,6 +213,10 @@ body {
 #search-btn:hover {
     background: #F3692E;
     ;
+}
+
+.info-icons {
+    display: flex;
 }
 
 
