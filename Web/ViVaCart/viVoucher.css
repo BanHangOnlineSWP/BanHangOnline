@@ -16,6 +16,68 @@
 
 }
 
+.cart-total {
+    margin: 20px 100px 20px 100px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    border-radius: 20px;
+    background-color: #f3692e15;
+
+}
+
+.total {
+    background-color: #ffc77e;
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: 0;
+    padding: 10px 20px 10px 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.349);
+    text-align: right;
+    border-radius: 10px;
+    bottom: 20px;
+
+
+}
+
+.coin-total {
+    display: flex;
+    justify-content: flex-end;
+
+
+}
+
+.coin-total p {
+    margin-right: 20px;
+    font-size: 30px;
+    font-weight: 800;
+
+}
+
+#num-coin {
+    color: #F3692E;
+}
+
+.coin-now {
+
+    font-size: 20px;
+    padding-right: 100px;
+}
+
+.btn-pay {
+    font-weight: bold;
+    text-align: center;
+    height: 45px;
+    width: 150px;
+    color: white;
+    background: #F3692E;
+    border-radius: 6px;
+    border-style: none;
+}
+
+.btn-pay:hover {
+    color: #F3692E;
+    background: #f1c952;
+}
+
 
 
 
@@ -48,6 +110,7 @@
     margin: 10px;
 
 
+
 }
 
 #cartItem {
@@ -60,6 +123,7 @@
     margin: 30px 10px 30px 10px;
     /* background-color: rgb(22, 79, 129); */
     justify-content: space-between;
+    background: white;
 
 }
 
@@ -116,14 +180,21 @@
 #cart-xu p {
     font-size: 23px;
     color: #f3c163;
-    font-weight: 700;
-    margin-right: 30px;
+    font-weight: 500;
+
+}
+
+.btn-pay {
+    margin: 20px 110px 0;
 }
 
 
 
+
+
+
 #cart-bth button {
-    font-size: 14px;
+    font-size: 13px;
     background-color: #F3692E;
     color: #fff;
     padding: 6px 13px 6px 13px;

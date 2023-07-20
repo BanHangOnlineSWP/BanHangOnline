@@ -5,9 +5,14 @@
     <title>Ví Voucher</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
 
     <link rel="stylesheet" href="viVoucher.css">
     <link rel="stylesheet" href="../index/style.css">
@@ -24,14 +29,21 @@
 
     <div class="tab-cart">
         <h1>Ví Voucher</h1>
-        <ul class="nav nav-tabs">
-            <li class="active"><a href="#home">Voucher của tôi</a></li>
-            <li><a href="#menu1">Voucher đã sử dụng</a></li>
-            <li><a href="#menu2">Voucher đã hết hạn</a></li>
+        <ul class="nav nav-tabs" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" data-toggle="tab" href="#home">Voucher của tôi</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#menu1">Voucher đã sử dụng</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#menu2">Voucher đã hết hạn</a>
+            </li>
         </ul>
 
+        <!-- Tab panes -->
         <div class="tab-content">
-            <div id="home" class="tab-pane fade in active ">
+            <div id="home" class="container tab-pane active" style="margin: auto;"><br>
                 <div class="cart">
                     <div id="cart-items">
                         <div id="cartItem" key={product.id}>
@@ -86,7 +98,7 @@
                 </div>
 
             </div>
-            <div id="menu1" class="tab-pane fade">
+            <div id="menu1" class="container tab-pane fade" style="margin: auto;"><br>
                 <div class="cart">
                     <div id="cart-items">
                         <div id="cartItem" key={product.id}>
@@ -110,7 +122,7 @@
 
                 </div>
             </div>
-            <div id="menu2" class="tab-pane fade">
+            <div id="menu2" class="container tab-pane fade" style="margin: auto;"><br>
                 <div class="cart">
                     <div id="cart-items">
                         <div id="cartItem" key={product.id}>
@@ -136,17 +148,11 @@
 
                 </div>
             </div>
-
         </div>
     </div>
+    </div>
 
-    <script>
-        $(document).ready(function () {
-            $(".nav-tabs a").click(function () {
-                $(this).tab('show');
-            });
-        });
-    </script>
+
 
 
 </body>
