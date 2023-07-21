@@ -20,7 +20,8 @@
 
 <!-- Lien kết css  -->
 <link rel="stylesheet" href="description.css">
-
+<script src="app.js"></script>
+<script src="../products.js"></script>
 <!-- Lien kết Bosstrap  -->
 <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -137,6 +138,9 @@
 
                 <div class="addContainer">
                     <button class="pro_btn">NHẬN MÃ NGAY</button>
+                    <button class="pro_btn products">
+                        THÊM VÀO GIỎ HÀNG
+                    </button>
                 </div>
 
                 <br />
@@ -202,5 +206,13 @@
     </footer>
     <script src="script.js"></script>
 </body>
+<script>
+    const porductsListEl = document.querySelector(".products-list");
+    const seeMoreBtn = document.querySelector(".see-more-btn");
+
+    seeMoreBtn.addEventListener('click', () => {
+        porductsListEl.scrollIntoView({ behavior: "smooth" })
+    })
+</script>
 
 </html>
