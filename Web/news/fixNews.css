@@ -1,0 +1,124 @@
+html {
+    font-size: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    font-size: 1.2rem;
+}
+
+.blog {
+    width: 96%;
+    max-width: 117rem;
+    margin: 0 auto;
+    /* margin: 20px 100px 0 100px; */
+}
+
+.hero {
+    max-width: 114rem;
+    height: 40rem;
+    margin: 5rem auto;
+}
+
+main {
+    width: 100%;
+    max-width: 80rem;
+    background-color: white;
+    margin: 0 auto;
+    padding: 3rem;
+    border-radius: 1.5rem;
+    margin-top: -15rem;
+}
+
+main h2 {
+    font-size: 3rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+main .profile-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 3rem 0;
+}
+
+main .profile-container .profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .profile-container .profile .img-container {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 0.5rem;
+}
+
+main .profile-container .profile .text {
+    margin: 0 1rem;
+    color: #5b5963;
+    font-size: 1.2rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.profile .text h3 {
+    text-transform: uppercase;
+}
+
+.backBtn {
+    display: inline-block;
+    text-transform: capitalize;
+    padding: 0.3rem 1.5rem;
+    border-radius: 0.2rem;
+    background: #F3692E;
+    border: none;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.backBtn a {
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.backBtn:hover {
+    transform: translateY(-1rem);
+}
+
+main .content p {
+    color: #5b5963;
+    margin: 1rem 0;
+}
+
+main .content .content-img-container {
+    width: 100%;
+    height: 35rem;
+    /* background: url(../img/news/news-2.jpg) no-repeat center center / cover; */
+}
+
+.tags {
+    display: flex;
+    align-items: center;
+}
+
+.tags p {
+    font-size: 1.4rem;
+    text-transform: capitalize;
+}
+
+/* .tags a {
+    display: inline-block;
+    padding: 0.3rem 1.5rem;
+    background-color: #f5f5f5;
+    color: #5b5963;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    margin: 0 0.5rem;
+} */
