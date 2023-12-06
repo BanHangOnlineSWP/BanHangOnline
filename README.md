@@ -102,7 +102,8 @@ Connect MySQL Server (host, username, password, database).
 - Choose "File" -> "Open" -> "Project/Solution" and choose project folder.
   
 ## Some ScreenShot about WEB
-
-![Home](#)
+![Home ](https://github.com/BanHangOnlineSWP/BanHangOnline/blob/main/ScreenShot/home.jpg)
+![Figma Design](https://github.com/BanHangOnlineSWP/BanHangOnline/blob/main/ScreenShot/figma.png)
+![Database](https://github.com/BanHangOnlineSWP/BanHangOnline/blob/main/ScreenShot/database.png)
 
 
