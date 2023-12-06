@@ -10,7 +10,7 @@ brands, shops and restaurants.
 
 ## Technical Language
 
-List the primary programming languages, frameworks, and tools used in the project. Include any relevant libraries or dependencies.
+.Net, SQL Server,JavaScript, HTML/CSS ReactJS, API, Figma, ReactBoostrap, React-Materialize, ...
 
 ## Team Size
 5 people:
