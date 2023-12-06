@@ -1,6 +1,6 @@
 # Welcom to: Student Deal Website Development
 
-#### 
+#### A project of SWP391 in 3 months, SUMMER 2023, built by a group of 5 students in the 5th semester at FPT University. Mentor is Mr. Lam Huu Khanh Phuong.
 
 ## Overview
 
